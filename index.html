@@ -1,750 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
-	<!--	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <no zoom>-->
-
-	<title>Statistics Calculator</title>
-
-	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-
-	<style>
-		/* line 1, calcStyle.scss */
-		
-		* {
-			/*			border: 1px solid red !important;*/
-			padding: 0;
-			margin: 0;
-		}
-		/* line 7, calcStyle.scss */
-		
-		body {
-			font-family: 'Press Start 2P', Courier New;
-			background: #ccc;
-			text-align: center;
-			font-size: 10px;
-		}
-		/* line 14, calcStyle.scss */
-		
-		.container {
-			background-color: #222;
-			color: #ccc;
-			max-width: 540px;
-			/*min-height: 480px;*/
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-			flex-direction: column;
-			-ms-flex-pack: distribute;
-			justify-content: space-around;
-			padding: 2rem;
-			padding-top: 1rem;
-			padding-bottom: 2rem;
-			margin: 0 auto;
-			border-radius: 15px;
-			-webkit-box-shadow: 5px 10px 3px #555555;
-			box-shadow: 5px 10px 3px #555555;
-		}
-		/* line 36, calcStyle.scss */
-		
-		button,
-		ul,
-		input,
-		h2 {
-			padding: 0;
-			margin: 0;
-			font-size: inherit;
-			font-family: inherit;
-			padding: 1rem;
-			margin: 1.5rem;
-		}
-		/* line 48, calcStyle.scss */
-		
-		input {
-			background-color: #222;
-			border: 2px solid #eee;
-			color: #eee;
-		}
-		/* line 54, calcStyle.scss */
-		
-		button {
-			border: 3px solid #7d7;
-			background-color: #222;
-		}
-		/* line 59, calcStyle.scss */
-		
-		button:hover {
-			cursor: pointer;
-		}
-		/* line 63, calcStyle.scss */
-		
-		#calc:active {
-			background-color: #7c7;
-			color: #fff;
-		}
-		/* line 68, calcStyle.scss */
-		
-		#title,
-		.display {
-			margin: 0;
-			margin-bottom: 1rem;
-			padding: 0;
-			text-transform: uppercase;
-			font-size: 2rem;
-			font-weight: 100;
-		}
-		/* line 78, calcStyle.scss */
-		
-		.main-btns {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: justify;
-			-ms-flex-pack: justify;
-			justify-content: space-between;
-			padding: 1rem;
-		}
-		/* line 88, calcStyle.scss */
-		
-		#input {
-			-webkit-box-flex: 2;
-			-ms-flex: 2 1 0px;
-			flex: 2 1 0px;
-			margin: 0;
-			padding: 0;
-			border-color: #bbb;
-			padding: 1rem;
-			border-radius: 15px 0px 0px 15px;
-		}
-		/* line 99, calcStyle.scss */
-		
-		#add {
-			-webkit-box-flex: 1;
-			-ms-flex: 1 1 0px;
-			flex: 1 1 0px;
-			color: #2ac;
-			margin: 0;
-			padding: 1rem;
-			border: 3px solid #2ac;
-			border-radius: 0px 15px 15px 0px;
-		}
-		/* line 110, calcStyle.scss */
-		
-		#add:active {
-			background: #2ac;
-			color: #eee;
-		}
-		/* line 115, calcStyle.scss */
-		
-		#calc {
-/*
-			-webkit-box-flex: 0;
-			-ms-flex: 0 1 0px;
-			flex: 0 1 0px;
-*/
-			color: #7d7;
-			border-radius: 15px;
-		}
-		/* line 123, calcStyle.scss */
-		
-		#picker {
-			max-width: 460px;
-			list-style: none;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-pack: distribute;
-			justify-content: space-around;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			margin: 0 auto;
-			padding: 0;
-		}
-		/* line 137, calcStyle.scss */
-		
-		.block1,
-		.block2 {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-ms-flex-item-align: center;
-			align-self: center;
-			padding: 0;
-			margin: 0;
-		}
-		/* line 148, calcStyle.scss */
-		
-		#picker li {
-			padding: 0;
-			margin: 0;
-			font-size: 1.3rem;
-			padding-top: 1rem;
-			padding-bottom: .2rem;
-			color: #7d7;
-		}
-		/* line 157, calcStyle.scss */
-		
-		a,
-		a:visited,
-		a:active,
-		a:focus {
-			margin: 0 .5rem;
-			color: #aaa;
-			display: block;
-			text-decoration: none;
-			border: 2px solid transparent;
-		}
-		/* line 168, calcStyle.scss */
-		
-		a:hover {
-			text-decoration: none;
-			color: #ddd;
-			border-bottom-color: #ddd;
-		}
-		/* line 174, calcStyle.scss */
-		
-		#picker li a.active {
-			text-decoration: none;
-			color: #ddd;
-			border-bottom-color: #ddd;
-		}
-		/* line 180, calcStyle.scss */
-		
-		#displayScreen {
-			width: 80%;
-			height: 6rem;
-			padding: 1rem 1rem 0 1rem;
-			margin: 1rem auto;
-			border: 2px solid #aaa;
-			border-radius: 15px;
-			background: #555;
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			-ms-flex-direction: column;
-			flex-direction: column;
-		}
-		/* line 197, calcStyle.scss */
-		
-		#displayNum,
-		#displayTotal {
-			padding: 0;
-			margin: 0;
-			overflow: auto;
-			-ms-flex-item-align: stretch;
-			align-self: stretch;
-		}
-		/* line 206, calcStyle.scss */
-		
-		#displayTotal {
-			/*			background: rgba(0, 255, 255, 0.38);*/
-			-webkit-box-flex: 1;
-			-ms-flex: 1 1 auto;
-			flex: 1 1 auto;
-			padding: 1rem auto;
-			padding-top: .5rem;
-		}
-		/* line 215, calcStyle.scss */
-		
-		#displayTotal h3 {
-			padding-bottom: .5rem;
-		}
-		/* line 219, calcStyle.scss */
-		
-		#displayNum {
-			/*			background: rgba(255, 0, 216, 0.38);*/
-			height: 2rem;
-		}
-		/* line 224, calcStyle.scss */
-		
-		#displayNum a {
-			padding-top: .4rem;
-			color: #999;
-			border: 0;
-		}
-		/* line 230, calcStyle.scss */
-		
-		#displayNum a:hover {
-			border: 0;
-			color: #444;
-		}
-		/* line 235, calcStyle.scss */
-		
-		#displayNum p {
-			padding-top: .4rem;
-			color: #222;
-		}
-		/* line 240, calcStyle.scss */
-		
-		#display {
-			padding: 0;
-			margin: 0;
-			font-size: 2.4rem;
-			color: #31ba4c;
-			text-shadow: 2px 2px #444;
-			overflow: auto;
-			-webkit-box-flex: 2;
-			-ms-flex: 2 1 90%;
-			flex: 2 1 90%;
-		}
-		/* line 252, calcStyle.scss */
-		
-		.settings {
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-box-pack: center;
-			-ms-flex-pack: center;
-			justify-content: center;
-		}
-		/* line 257, calcStyle.scss */
-		
-		.btnSet {
-			border-color: #777;
-			color: #777;
-			padding: .7rem;
-			width: 100px;
-			/*			-ms-flex-item-align: center;*/
-			/*			align-self: center;*/
-			border-radius: 15px;
-			margin: 1rem;
-		}
-		/* line 268, calcStyle.scss */
-		
-		.btnSet:active {
-			color: #ccc;
-			background: #777;
-		}
-		/* line 273, calcStyle.scss */
-		
-		#info {
-			width: 3.5rem;
-		}
-		/* line 276, calcStyle.scss */
-		
-		#infoBlock {
-			background: #222;
-			color: #eee;
-			/*			font-size: .6rem;*/
-			line-height: 200%;
-			border: 2px solid #777;
-			border-radius: 10px;
-			padding: 1rem 1rem;
-			position: absolute;
-			max-width: 400px;
-			opacity: .9;
-			margin: auto;
-			-ms-flex-item-align: center;
-			align-self: center;
-			overflow: auto;
-			max-height: 500px;
-		}
-		/* line 293, calcStyle.scss */
-		
-		#xOut {
-			padding: .2rem;
-			border: 0;
-			background: 0;
-			float: right;
-			/*			margin: 1px;*/
-			color: #aaa;
-			/*			height: 4px;*/
-			/*			width: 4px;*/
-			border-bottom: 2px solid #aaa;
-		}
-		/* line 305, calcStyle.scss */
-		
-		#xOut:hover {
-			color: #eee;
-			border-bottom: 2px solid #eee;
-		}
-		/*	------------------iPhone 7 Plus---------------	*/
-		
-		@media (max-width: 430px) {
-			/* line 312, calcStyle.scss */
-			body {
-				background: #222;
-			}
-			/* line 315, calcStyle.scss */
-			.container {
-				margin-top: 1rem;
-				padding: .8rem;
-				max-height: 100%;
-				-webkit-box-shadow: none;
-				box-shadow: none;
-			}
-			/* line 321, calcStyle.scss */
-			#title {
-				margin: 1rem;
-				font-size: 2rem;
-			}
-			/* line 325, calcStyle.scss */
-			#picker li {
-				font-size: 1.2rem;
-			}
-			/* line 328, calcStyle.scss */
-			#displayScreen {
-				margin: 3rem auto;
-			}
-		}
-		/*	------------------iPhone 6---------------	*/
-		
-		@media (max-width: 430px) {
-			/* line 335, calcStyle.scss */
-			body {
-				background: #222;
-			}
-			/* line 338, calcStyle.scss */
-			.container {
-				margin-top: 1rem;
-				padding: .8rem;
-				max-height: 100%;
-			}
-			/* line 343, calcStyle.scss */
-			#title {
-				margin: 1rem;
-				font-size: 1.8rem;
-			}
-			/* line 347, calcStyle.scss */
-			#picker li {
-				font-size: 1rem;
-			}
-			/* line 350, calcStyle.scss */
-			#displayScreen {
-				margin: 2rem auto 1rem auto;
-			}
-		}
-		/*	------------------iPhone 5 ---------------	*/
-		
-		@media (max-width: 325px) {
-			/* line 357, calcStyle.scss */
-			.container {
-				margin-top: 1rem;
-			}
-			/* line 360, calcStyle.scss */
-			#title {
-				margin: 1rem;
-				font-size: 1.7rem;
-			}
-			/* line 364, calcStyle.scss */
-			button,
-			ul,
-			input,
-			h2 {
-				padding: .8rem;
-				margin: .6rem;
-			}
-			/* line 371, calcStyle.scss */
-			.main-btns {
-				padding: .5rem;
-			}
-			/* line 374, calcStyle.scss */
-			#input {
-				padding: .7rem;
-			}
-			/* line 377, calcStyle.scss */
-			#add {
-				padding: .7rem;
-				margin-right: .2rem;
-				border-top-right-radius: 15px;
-			}
-			/* line 382, calcStyle.scss */
-			#picker li {
-				font-size: .9rem;
-			}
-			/* line 385, calcStyle.scss */
-			#displayScreen {
-				margin-top: 2rem;
-			}
-			/* line 388, calcStyle.scss */
-			.btnSet {
-				margin-top: 1rem;
-				padding: .3rem;
-			}
-		}
-		/*		/////////Destop Layout ///////////*/
-		
-		@media (min-width: 740px) {
-			/* line 396, calcStyle.scss */
-			body {
-				padding: 10rem;
-			}
-			/* line 399, calcStyle.scss */
-			.container {
-				padding-top: 3rem;
-				max-width: 480px;
-			}
-			/* line 403, calcStyle.scss */
-			#displayScreen {
-				width: 80%;
-				height: 9rem;
-			}
-			/* line 407, calcStyle.scss */
-			#displayTotal {
-				margin-top: 1rem;
-			}
-			/* line 410, calcStyle.scss */
-			#displayNum {
-				padding: 1rem 0;
-				/*				padding-bottom: 1rem;*/
-				margin-bottom: .3rem;
-				color: #222;
-			}
-		}
-		/*# sourceMappingURL=calcStyle.css.map */
-
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Check Out my Portfolio</title>
 </head>
-
 <body>
-	<div class="container">
-		<h2 id="title">Statistics Calculator</h2>
+  <div class="container">
+    <header id="main-header">
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-md-5 col-sm-12">
+          <img src="img/person1.jpg" alt="">
+        </div>
+        <div class="col-lg-8 col-md-7 col-sm-12">
+          <div class="d-flex flex-column">
+            <div class="p-5 bg-inverse text-white">
+              <div class="name d-flex flex-row justify-content-between align-items-center">
+                <h1 class="display-4">Omar Villanueva</h1>
+                <div><i class="fa fa-twitter"></i></div>
+                <div><i class="fa fa-facebook"></i></div>
+                <div><i class="fa fa-instagram"></i></div>
+                <div><i class="fa fa-github"></i></div>
+              </div>
+            </div>
 
-		<div class="main-btns">
-			<input id="input" type="text" placeholder="Enter Numbers" />
-			<button id="add" onclick="add"> Add</button>
-		</div>
+            <div class="p-4 bg-dark">Entrepreneur and Web/Mobile App Enthusiast</div>
 
-		<button id="calc">Calculate</button>
+            <div>
+              <div class="d-flex flex-row text-white align-items-stretch text-center">
+                <div class="port-item p-4 bg-primary" data-toggle="collapse" data-target="#home">
+                  <i class="fa fa-home d-block"></i> Home
+                </div>
+                <div class="port-item p-4 bg-success" data-toggle="collapse" data-target="#resume">
+                  <i class="fa fa-graduation-cap d-block"></i> Resume
+                </div>
+                <div class="port-item p-4 bg-warning" data-toggle="collapse" data-target="#work">
+                  <i class="fa fa-folder-open d-block"></i> Work
+                </div>
+                <div class="port-item p-4 bg-danger" data-toggle="collapse" data-target="#contact">
+                  <i class="fa fa-envelope d-block"></i> Contact
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-		<ul name="picker" id="picker">
-			<div class="block2">
-				<li value="5">
-					<a class="active" href="#">Total</a>
-				</li>
-				<li value="3">
-					<a href="#">Range</a>
-				</li>
-				<li value="4">
-					<a href="#">Count</a>
-				</li>
-			</div>
-			<div class="block1">
-				<li value="0" autofocus>
-					<a href="#">Mean</a>
-				</li>
-				<li value="1">
-					<a href="#">Median</a>
-				</li>
-				<li value="2">
-					<a href="#">Mode</a>
-				</li>
-			</div>
-		</ul>
+    <!-- HOME -->
+    <div id="home" class="collapse show">
+      <div class="card card-block card-primary text-white py-5">
+        <h2>Welcome To My Page</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laborum!</p>
+      </div>
 
+      <div class="card card-block py-5">
+        <h3>My Skills</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex rerum illo sequi maxime, repudiandae quo in quos, facere minus officia.</p>
+        <hr>
+        <h4>Swift - iOS</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width:88%"></div>
+        </div>
+        <h4>Java - Android</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width:85%"></div>
+        </div>
+        <h4>HTML</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width:88%"></div>
+        </div>
+        <h4>CSS</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width:85%"></div>
+        </div>
+        <h4>JavaScript</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width:85%"></div>
+        </div>
+        <h4>Python</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" role="progressbar" style="width:55%"></div>
+        </div>
+      </div>
+    </div>
 
-		<div id="displayScreen">
-			<span id="displayTotal">
-				<h3 id="display">00.00</h3>
-			</span>
-			<span id="displayNum">
-				<p id='numbersList'></p>
-				<a href="#" id="btnDisplayNum">View Numbers</a>
-			</span>
-		</div>
+    <!-- RESUME -->
+    <div id="resume" class="collapse">
+      <div class="card card-block card-success text-white py-5">
+        <h2>My Resume</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, placeat.</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>Where Have I Worked?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, inventore atque dolore blanditiis sit repudiandae!</p>
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Devmasters</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, eum?</p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Position:Full Stack Developer
+              </p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Phone: (555) 555-5555
+              </p>
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted">Dates: 2015 - 2017</h6>
+            </div>
+          </div>
 
-		<div class="settings">
-			<button id="reset" class="btnSet">Reset</button>
-			<button id="info" class="btnSet">i</button>
-		</div>
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">Websites Pro</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, eum?</p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Position:Front End Developer
+              </p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Phone: (444) 444-4444
+              </p>
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted">Dates: 2013 - 2015</h6>
+            </div>
+          </div>
 
-		<div id="infoBlock" style="display:none;">
-
-
-			<br>
-			<h3>INSTRUCTIONS</h3>
-			<p>1) "Add" all numbers one by one.<br>2) When done press "Calculate". <br> 3) Select a calculation. <br> 4) "View Numbers" (optional). <br> 5) "Reset" to start again.</p>
-			<br>
-
-			<h3>CALCULATIONS</h3>
-			<p>TOTAL = Sum of all numbers.<br> COUNT = Amount of numbers added.<br> RANGE = Diference between lowest and highest number.<br> MEAN = Total divided by Count (average).<br> MEDIAN = The exact middle number or the Mean of both middle numbers.<br> MODE = The number that is repeated the most.</p>
-			<button id="xOut">Close</button>
-
-
-		</div>
-	</div>
-
-
-
-
-
-	<script>
-		var numbers, total, count, mean, median, mode, range, enable, btnOn, numMapping, i;
-		var btnDisplay = document.getElementById("btnDisplayNum");
-		var numberslist = document.getElementById("numbersList");
-		var display = document.getElementById("display");
-		var input = document.getElementById("input");
-		var infoB = document.getElementById("infoBlock");
-		init();
-
-		document.addEventListener('keypress', function vet(e) {
-			if (e.keyCode == 13) {
-				btnAdd();
-			}
-		});
-
-		document.addEventListener('click', function clickBtns(e) {
-
-			if (btnOn) {
-				if (e.target.id == 'add') {
-					btnAdd();
-				} else if (e.target.id == 'calc') {
-					btnCalculate();
-					display.textContent = total;
-					input.placeholder = "Reset Calculator..."
-					btnOn = false;
-				}
-			}
-			if (!btnOn) {
-				if (e.target.innerText == 'Mean') {
-					display.textContent = mean;
-					displayCalcs(e);
-				} else if (e.target.innerText == 'Median') {
-					display.textContent = median;
-					displayCalcs(e);
-				} else if (e.target.innerText == 'Mode') {
-					display.textContent = mode;
-					displayCalcs(e);
-				} else if (e.target.innerText == 'Range') {
-					display.textContent = range;
-					displayCalcs(e);
-				} else if (e.target.innerText == 'Count') {
-					display.textContent = count;
-					displayCalcs(e);
-				} else if (e.target.innerText == 'Total') {
-					display.textContent = total;
-					displayCalcs(e);
-				} else if (e.target.id == 'btnDisplayNum') {
-					if (!btnOn) {
-						e.target.style.display = "none";
-						numberslist.style.display = "block";
-						numberslist.textContent = String(numbers);
-					}
-				}
-			}
-			if (e.target.id == 'info') {
-				infoB.style.display = "block";
-
-			}
-			if (e.target.id == 'xOut') {
-				infoB.style.display = "none";
-			}
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">123 Designs</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, eum?</p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Position:Designer
+              </p>
+              <p class="p-2 mb-3 bg-inverse text-white">
+                Phone: (333) 333-3333
+              </p>
+            </div>
+            <div class="card-footer">
+              <h6 class="text-muted">Dates: 2010 - 2013</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
-			if (e.target.id == 'reset') {
-				init();
-			}
-		});
+    <!-- WORK -->
+    <div id="work" class="collapse">
+      <div class="card card-block card-warning text-white py-5">
+        <h2>My Porfolio</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, placeat.</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>What Have I Built?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, inventore atque dolore blanditiis sit repudiandae!</p>
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=251" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=252" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=253" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=254" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=255" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=256" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=257" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=257" alt="" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="https://unsplash.it/1200/768.jpg?image=258" data-toggle="lightbox">
+              <img src="https://unsplash.it/600.jpg?image=258" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		function btnAdd() {
-			if (input.value == parseInt(input.value, 10)) {
-				var number = parseInt(input.value);
-				numbers.push(number);
-				input.value = "";
-				enable = true;
-			} else {
-				input.value = "Enter a Valid Number!"
-				i = "del";
-			}
-		};
-		input.addEventListener('click', function() {
-			input.value = "";
-		});
+    <!-- CONTACT -->
+    <div id="contact" class="collapse">
+      <div class="card card-block card-danger text-white py-5">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, placeat.</p>
+      </div>
+      <div class="card card-block py-5">
+        <h3>Get In Touch</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, inventore atque dolore blanditiis sit repudiandae!</p>
+        <form>
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-user"></i>
+              </span>
+              <input type="text" class="form-control bg-inverse text-white" placeholder="Name">
+            </div>
+          </div>
 
-		function btnCalculate() {
-			sortNumbers();
-			calculateTotals();
-			calculateMean();
-			calculateMedian();
-			calculateMode();
-			calculateRange();
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-envelope"></i>
+              </span>
+              <input type="email" class="form-control bg-inverse text-white" placeholder="Email">
+            </div>
+          </div>
 
-			console.log(numbers, " = ", total)
-		};
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon bg-danger text-white">
+                <i class="fa fa-pencil"></i>
+              </span>
+              <textarea rows="5" class="form-control bg-inverse text-white" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <input type="submit" class="btn btn-danger btn-block btn-lg" value="Submit">
+        </form>
+      </div>
+    </div>
 
-		function sortNumbers() {
-			numbers.sort(function(a, b) {
-				return a - b;
-			});
-		};
+    <footer id="main-footer" class="p-5 bg-inverse text-white">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="#" class="btn btn-outline-secondary"><i class="fa fa-cloud"></i> Download My Resume</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-		function calculateTotals() {
-			// numbers total
-			for (i = 0; i < numbers.length; i++) {
-				total += numbers[i]
-				count = numbers.length
-			}
-		};
+  <script src="js/jquery.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.js"></script>
+  <script>
+    $('.port-item').click(function(){
+      $('.collapse').collapse('hide');
+    });
 
-		function calculateMean() {
-			//numbers total/numbers.count
-			mean = (total / count).toFixed(2)
-		};
-
-		function calculateMedian() {
-			//if odd median = middle
-			//if even m = mean of middles
-			var indx = Math.floor(count / 2)
-			if (count % 2 == 0) {
-				median = (numbers[indx] - numbers[indx - 1]) / 2
-			} else {
-				median = numbers[indx]
-			}
-		};
-
-		function calculateMode() {
-			//			debugger;
-
-			var greatestFreq = 0;
-			numbers.forEach(function findMode(number) {
-				numMapping[number] = (numMapping[number] || 0) + 1;
-
-				if (greatestFreq < numMapping[number]) {
-					greatestFreq = numMapping[number];
-					mode = number
-				}
-			});
-			return +mode;
-		};
-
-		function calculateRange() {
-			//largest value - smallest
-			range = (numbers[count - 1] - numbers[0])
-		};
-
-		function displayCalcs(e) {
-			var elemnt = document.querySelector('.active');
-			elemnt.className = '';
-			e.target.className = 'active';
-		}
-
-		function init() {
-			numbers = [];
-			total = 0;
-			count = 0;
-			mean = 0;
-			median = 0;
-			mode = 0;
-			range = 0;
-			btnOn = true;
-			input.value = "";
-			numMapping = {};
-			display.textContent = "00.00";
-			input.value = "";
-			input.placeholder = "Enter a Number...";
-			btnDisplay.style.display = "block";
-			numberslist.style.display = "none";
-			numberslist.textContent = "";
-		};
-
-	</script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+  </script>
 </body>
-
 </html>
