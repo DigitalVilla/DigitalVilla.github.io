@@ -1,0 +1,49 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;    
+}
+
+html {
+    /* font-size: 1rem == 10px; */
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+header,
+section {
+    padding: 6rem 8rem;
+    height: 100vh;
+    font-size: 2rem;
+    /* background: blue; */
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+@media (max-width: 850px) {
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        line-height: 1;
+    }
+
+    section {
+        height: 100%;
+    }
+}

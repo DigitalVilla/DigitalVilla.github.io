@@ -8,29 +8,44 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="img/icon.png">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/navMobile.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header.css">
-
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation_checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation_button">
+            <span class="navigation_icon">&nbsp;</span>
+        </label>
+        <div class="navigation_background">&nbsp;</div>
+
+        <nav class="navigation_nav">
+            <ul class="navigation_list">
+                <li class="navigation_item">
+                    <a href="#Experience" class="navigation_link">Experience</a>
+                </li>
+                <li class="navigation_item">
+                    <a href="#Portfolio" class="navigation_link">Portfolio</a>
+                </li>
+                <li class="navigation_item">
+                    <a href="#About" class="navigation_link">About Me</a>
+                </li>
+                <li class="navigation_item">
+                    <a href="#Contact" class="navigation_link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
 
-        <nav class='menu'>
-            <div class="logo">
+        <nav class='header_menu'>
+            <div class="header_menu-logo">
                 <img src="img/VlogoW.png" alt="Logo">
             </div>
 
-            <ul class="menu-list">
-                <li class="">
-                    <a href="#About">About Me</a>
-                </li>
+            <ul class="header_menu-list">
                 <li class="">
                     <a href="#Experience">Experience</a>
                 </li>
@@ -38,70 +53,50 @@
                     <a href="#Portfolio">Portfolio</a>
                 </li>
                 <li class="">
+                    <a href="#About">About Me</a>
+                </li>
+                <li class="">
                     <a href="#Contact">Contact</a>
                 </li>
             </ul>
         </nav>
 
-        <div class="title">
+        <div class="header_title">
             <h1>
                 <span>Omar Villanueva </span>
                 <span>Developer & Product Designer </span>
             </h1>
-            <div class="btn-holder ">
-                <a type="button" href="#Portfolio" class="btn btn-header"> View Portfolio</a>
+            <div class="header_title-btn">
+                <a type="button" href="#Portfolio" class="btn btn--white btn--animated"> View Portfolio</a>
             </div>
         </div>
 
 
-        <div class="title-mobile">
-            <div class="logo-mobile">
+        <div class="header_mobile-title">
+            <div class="header_mobile-title-logo">
                 <img src="img/VlogoW.png" alt="Logo">
             </div>
 
             <h1>
-                <span>Villanueva</span>
+                Villanueva
             </h1>
-            <div class="btn-holder-mobile">
-                <a type="button" href="#Portfolio" class="btn btn-mobile"> View Portfolio</a>
+            <div class="header_mobile-title-btn">
+                <a type="button" href="#Portfolio" class="btn btn--white btn--animated"> View Portfolio</a>
             </div>
         </div>
 
 
-        <a type="button" class="nav-button"></a>
-        <div class="navigation">
-            <div class="nav-background">&NonBreakingSpace;</div>
-            <nav class="navigation-nav">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link" href="Bio.html">
-                            <span>01</span> About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span>02</span>Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span>03</span>Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <span>04</span>Contact</a>
-                    </li>
-                </ul>
-            </nav>
-
-
-            <footer>
-                <div class="footer">
-                    <h2>
-                        All right reserved
-                    </h2>
-                </div>
-            </footer>
 
     </header>
+
+
+    <section id="Experience">
+        <h1>Experience</h1>
+    </section>
+
+    <section id="Portfolio">
+        <h1>Portfolio</h1>
+    </section>
     <section id="About">
         <h1>ABOUT ME </h1>
         <img src="img/me.jpg" alt="">
@@ -119,18 +114,10 @@
             Therefore, by harnessing my social background and improving my OOP-Design-Pattern skills, I believe I will be able to develop
             software that people will love. </p>
     </section>
-
-    <section id="Experience">
-        <h1>Experience</h1>
-    </section>
-
-    <section id="Portfolio">
-        <h1>Portfolio</h1>
-    </section>
     <section id="Contact">
         <h1>Contact</h1>
     </section>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

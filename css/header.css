@@ -210,7 +210,7 @@
     margin-top: -5px; 
 } */
 
-@media (max-height: 400px) {
+@media (max-height: $BP4) {
     .title {
         padding-top: 3.5rem; 
         height: 20rem;
