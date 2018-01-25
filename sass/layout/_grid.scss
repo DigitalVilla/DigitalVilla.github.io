@@ -36,9 +36,9 @@
 .row {
     margin: 1rem 0;
     [class*="col-"] {
-       border: 1px solid red;
+    //    border: 1px solid red;
         border-radius: .5rem;
-        padding: 2rem 0;
+        padding: 5rem 2rem;
     }
 }
 

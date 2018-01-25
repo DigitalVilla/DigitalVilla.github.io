@@ -173,6 +173,10 @@ body {
   border-color: #06d59c;
   background-color: #06d59c; }
 
+.btn-action {
+  margin-top: 3rem;
+  padding: 1rem 3rem; }
+
 @media (max-width: 850px) {
   .btn, .btn:link, .btn:visited {
     padding: 1.5rem 4rem;
@@ -187,6 +191,34 @@ body {
   .btn, .btn:link, .btn:visited {
     padding: 1.5rem 3rem;
     font-size: 1.5rem; } }
+
+.lightbox {
+  position: relative; }
+  .lightbox_photo {
+    position: absolute;
+    box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
+    transition: all .2s;
+    opacity: .8; }
+    .lightbox_photo-1 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-10%, -10%); }
+    .lightbox_photo-2 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-90%, 30%); }
+    .lightbox_photo-3 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-75%, -5%); }
+    .lightbox_photo-4 {
+      top: 50%;
+      left: 50%;
+      transform: translate(-30%, 60%); }
+    .lightbox_photo:hover {
+      z-index: 10;
+      opacity: 1;
+      box-shadow: 0 2.5rem 4rem rgba(46, 46, 46, 0.5); }
 
 .navigation {
   display: none;
@@ -305,11 +337,9 @@ body {
     transition: 0.3s;
     cursor: pointer;
     color: #2e2e2e;
-    border-radius: 1.2rem;
+    border-radius: 1.5rem;
     border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border: 0.3rem solid rgba(6, 213, 156, 0.7);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+    border-bottom-right-radius: 0; }
     #Experience .resume_cards [class*="card-"] h2 {
       font-weight: 300;
       padding: 1rem;
@@ -335,8 +365,6 @@ body {
         font-size: 1.5rem;
         text-align: right;
         color: #05a378; }
-  #Experience .resume_cards [class*="card-"]:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   #Experience .resume_cards .card-1 {
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-1.jpg);
     background-position: center left; }
@@ -379,9 +407,8 @@ body {
 .row {
   margin: 1rem 0; }
   .row [class*="col-"] {
-    border: 1px solid red;
     border-radius: .5rem;
-    padding: 2rem 0; }
+    padding: 5rem 2rem; }
 
 /*<div class="row">
 <div class="col-1-of-4">&nbsp;</div>

@@ -1,4 +1,45 @@
-[class*="lightbox_"] {
-    // background: red;
-    // background-color: red;
+.lightbox {
+    position: relative;
+    &_photo {
+        position: absolute;
+        box-shadow: 0 1.5rem 4rem rgba($dark, .4);
+        transition: all .2s;
+        opacity: .8;
+        &-1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-10%,-10%);
+            // z-index: 4;
+            // border: 5px solid green;
+        }
+        &-2 {
+            top: 50%;
+            left: 50%;
+            // z-index: 4;
+            transform: translate(-90%,30%);
+            // border: 5px solid yellow;
+        }
+        &-3 {
+            top: 50%;
+            left: 50%;
+            // z-index: 3;
+            transform: translate(-75%,-5%);
+            // border: 5px solid blue;
+        }
+        &-4 {
+            top: 50%;
+            left: 50%;
+            // z-index: 1;
+            transform: translate(-30%,60%);
+            // border: 5px solid red;
+        }
+        
+        &:hover {
+            z-index: 10;
+            opacity:1;
+            box-shadow: 0 2.5rem 4rem rgba($dark, .5);
+            // transform: scale(1);
+            // position: absolute;
+        }
+    }
 }
