@@ -1,32 +1,74 @@
-// .row {
-//     max-width: $grid-width;
-//     margin: 0 auto;
-//     &:not(:last-child) {
-//         margin-bottom: $gutter-vertical;
-//     }
-//     @include clearfix; //atribute selector ^:starts  $:ends *:contains 
-//     [class^="col-"] {
-//         float: left;
-//         &:not(:last-child) {
-//             margin-right: $gutter-horizontal;
-//         }
-//     }
-//     .col-1-of-2 {
-//         width: calc((100% - #{$gutter-horizontal}) / 2);
-//     }
-//     .col-1-of-3 {
-//         width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-//     }
-//     .col-2-of-3 {
-//         width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-//     }
-//     .col-1-of-4 {
-//         width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-//     }
-//     .col-2-of-4 {
-//         width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
-//     }
-//     .col-3-of-4 {
-//         width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-//     }
-// }
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    &:not(:last-child) {
+        margin-bottom: $gap-V;
+    }
+    @include clearfix; //atribute selector ^:starts  $:ends *:contains 
+   
+     //[alt = "logo"] (^ starts, *contains, $ end with)
+    [class*="col-"] {
+        float: left;
+        &:not(:last-child) {
+            margin-right: $gap-H;
+        }
+    }
+    .col-1-of-2 {
+        width: calc((100% - #{$gap-H}) / 2);
+    }
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gap-H}) / 3);
+    }
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$gap-H}) / 3) + #{$gap-H});
+    }
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gap-H}) / 4);
+    }
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$gap-H}) / 4) + #{$gap-H});
+    }
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$gap-H}) / 4) + 2 * #{$gap-H});
+    }
+}
+
+.row {
+    margin: 1rem 0;
+    [class*="col-"] {
+       border: 1px solid red;
+        border-radius: .5rem;
+        padding: 2rem 0;
+    }
+}
+
+
+
+/*<div class="row">
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-3">&nbsp;</div>
+<div class="col-1-of-3">&nbsp;</div>
+<div class="col-1-of-3">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-2">&nbsp;</div>
+<div class="col-1-of-2">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-2-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-3">&nbsp;</div>
+<div class="col-2-of-3">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-3-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+</div>*/

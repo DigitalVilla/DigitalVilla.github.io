@@ -1,0 +1,9 @@
+# # Ignore Node Modules
+# # folder/  to select the entire directory  
+# # folder/* to ignore only the flying files inside the directory 
+# # folder/
+# #
+node_modules/*
+node_modules/
+*/node_modules/*
+package-lock.json

@@ -141,18 +141,6 @@ body {
     border-color: #06d59c;
     background-color: #06d59c; }
 
-.btn--solid {
-  border: 0.3rem solid #f1f1f1;
-  padding: 3.5rem 3rem;
-  color: #f1f1f1;
-  background-color: rgba(241, 241, 241, 0.4); }
-  .btn--solid::after {
-    opacity: .4;
-    background-color: #f1f1f1; }
-  .btn--solid:hover {
-    border-color: #06d59c;
-    background-color: #06d59c; }
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -168,6 +156,22 @@ body {
 .btn--animated {
   animation: BtnUp .5s ease .9s;
   animation-fill-mode: backwards; }
+
+.btn-action:link, .btn-action:visited {
+  background-color: #06d59c;
+  border: 0.3rem solid #f1f1f1;
+  color: #f1f1f1;
+  font-size: 2rem !important;
+  border-radius: 1rem !important;
+  animation: none !important; }
+
+.btn-action:hover {
+  border-color: #06d59c;
+  background-color: #06d59c; }
+
+.btn-action:active {
+  border-color: #06d59c;
+  background-color: #06d59c; }
 
 @media (max-width: 850px) {
   .btn, .btn:link, .btn:visited {
@@ -293,6 +297,120 @@ body {
   .navigation {
     display: block; } }
 
+#Experience {
+  background: #e7e7e7;
+  color: black; }
+  #Experience .resume_cards [class*="card-"] {
+    width: 40rem;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #2e2e2e;
+    border-radius: 1.2rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 0.3rem solid rgba(6, 213, 156, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+    #Experience .resume_cards [class*="card-"] h2 {
+      font-weight: 300;
+      padding: 1rem;
+      height: 30%;
+      color: #f1f1f1;
+      font-size: 2.5rem;
+      margin-bottom: 1rem; }
+      #Experience .resume_cards [class*="card-"] h2 span {
+        display: block; }
+        #Experience .resume_cards [class*="card-"] h2 span:last-child {
+          color: #06d59c;
+          font-size: 2.1rem;
+          font-weight: 400; }
+    #Experience .resume_cards [class*="card-"] ul {
+      background: rgba(255, 255, 255, 0.9);
+      height: 70%;
+      padding: 1rem; }
+      #Experience .resume_cards [class*="card-"] ul li span {
+        color: #037253;
+        font-weight: 700; }
+      #Experience .resume_cards [class*="card-"] ul h6 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        text-align: right;
+        color: #05a378; }
+  #Experience .resume_cards [class*="card-"]:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  #Experience .resume_cards .card-1 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-1.jpg);
+    background-position: center left; }
+  #Experience .resume_cards .card-2 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-2.jpg);
+    background-position: top; }
+  #Experience .resume_cards .card-3 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-3.jpg);
+    background-position: top left; }
+  #Experience .resume_cards .card-4 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-4.jpg);
+    background-position: center; }
+
+.row {
+  max-width: 100%;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 2rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class*="col-"] {
+    float: left; }
+    .row [class*="col-"]:not(:last-child) {
+      margin-right: 3rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 3rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 3rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 3rem) / 3) + 3rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 3rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
+
+.row {
+  margin: 1rem 0; }
+  .row [class*="col-"] {
+    border: 1px solid red;
+    border-radius: .5rem;
+    padding: 2rem 0; }
+
+/*<div class="row">
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-3">&nbsp;</div>
+<div class="col-1-of-3">&nbsp;</div>
+<div class="col-1-of-3">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-2">&nbsp;</div>
+<div class="col-1-of-2">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-4">&nbsp;</div>
+<div class="col-2-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-1-of-3">&nbsp;</div>
+<div class="col-2-of-3">&nbsp;</div>
+</div>
+<div class="row">
+<div class="col-3-of-4">&nbsp;</div>
+<div class="col-1-of-4">&nbsp;</div>
+</div>*/
 .header {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/heroDesk.jpg);
   background-position: center;
