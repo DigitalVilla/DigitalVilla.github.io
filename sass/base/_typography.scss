@@ -6,48 +6,20 @@ body {
     text-align: center;
 }
 
-// //--- main title ---// 
-// .primary-head {
-//     color: $light;
-//     text-transform: uppercase;
-//     backface-visibility: hidden;
-//     margin-bottom: 2rem;
+.secondary-head {
+    font-size: 3rem;
+    font-weight: 700;
+    color: transparent; 
+    display: inline-block;
+    text-transform: uppercase;
+    background-image: linear-gradient(to left, $color1, $color3);
+    -webkit-background-clip: text;
     
-//     &--main {
-//         opacity: 0;
-//         display:block;
-//         white-space:nowrap;
-//         font-size: 4rem;
-//         font-weight: 500;
-//         letter-spacing: 2.7rem;
-//         animation: 1s slidefadeR .5s forwards;
-//     }
-    
-//     &--sub {
-//         opacity: 0;
-//         display: block;
-//         font-weight: 400;
-//         font-size: 2.4rem;
-//         white-space:nowrap;
-//         letter-spacing: 1rem;
-//         animation: 1s  slidefadeL .5s forwards;
-//     }
-// }
-
-// .secondary-head {
-//     font-size: 3rem;
-//     font-weight: 700;
-//     color: transparent; 
-//     display: inline-block;
-//     text-transform: uppercase;
-//     background-image: linear-gradient(to left, $secondary, $third);
-//     -webkit-background-clip: text;
-    
-//     &:hover {
-//         background-image: linear-gradient(to left,
-//         lighten($secondary,5%),
-//         lighten($third,5%));
-//         transform: skewX(-10deg) scale(1.1);
-//         text-shadow: .1rem .3rem 1rem rgba($dark,.15);
-//     }
-// }
+    &:hover {
+        background-image: linear-gradient(to left,
+        lighten($color1,5%),
+        lighten($color3,5%));
+        transform: skewX(-10deg) scale(1.1);
+        text-shadow: .1rem .3rem 1rem rgba($dark,.15);
+    }
+}

@@ -86,3 +86,19 @@
         transform: translateY(0);
     }
 }
+
+@keyframes fillbar {
+    0% {
+        opacity:.5;
+        width: 0%;
+    }
+    80% {
+        border:none;
+        width: 100%;
+        border: 1px solid transparent;
+        transform: scaleY(1.2);
+    }
+    100% {
+        opacity: 1;
+    }
+}

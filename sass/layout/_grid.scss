@@ -33,42 +33,6 @@
     }
 }
 
-.row {
-    margin: 1rem 0;
-    [class*="col-"] {
-    //    border: 1px solid red;
-        border-radius: .5rem;
-        padding: 5rem 2rem;
-    }
+@media (min-width: $BP1x) {
+    $gap-H:6rem !important;
 }
-
-
-
-/*<div class="row">
-<div class="col-1-of-4">&nbsp;</div>
-<div class="col-1-of-4">&nbsp;</div>
-<div class="col-1-of-4">&nbsp;</div>
-<div class="col-1-of-4">&nbsp;</div>
-</div>
-<div class="row">
-<div class="col-1-of-3">&nbsp;</div>
-<div class="col-1-of-3">&nbsp;</div>
-<div class="col-1-of-3">&nbsp;</div>
-</div>
-<div class="row">
-<div class="col-1-of-2">&nbsp;</div>
-<div class="col-1-of-2">&nbsp;</div>
-</div>
-<div class="row">
-<div class="col-1-of-4">&nbsp;</div>
-<div class="col-2-of-4">&nbsp;</div>
-<div class="col-1-of-4">&nbsp;</div>
-</div>
-<div class="row">
-<div class="col-1-of-3">&nbsp;</div>
-<div class="col-2-of-3">&nbsp;</div>
-</div>
-<div class="row">
-<div class="col-3-of-4">&nbsp;</div>
-<div class="col-1-of-4">&nbsp;</div>
-</div>*/

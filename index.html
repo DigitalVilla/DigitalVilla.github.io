@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/png" href="img/icon.png">
-    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <title>Digital Villa | ShowCase</title>
 </head>
 
@@ -24,7 +23,7 @@
         <nav class="navigation_nav">
             <ul class="navigation_list">
                 <li class="navigation_item">
-                    <a href="#Experience" class="navigation_link" id="2">Experience</a>
+                    <a href="#Experience" class="navigation_link" id="2" onClick="window.location.reload()">Experience</a>
                 </li>
                 <li class="navigation_item">
                     <a href="#Portfolio" class="navigation_link" id="3">Portfolio</a>
@@ -33,16 +32,20 @@
                     <a href="#About" class="navigation_link" id="4">About Me</a>
                 </li>
                 <li class="navigation_item">
-                    <a href="#Contact" class="navigation_link" id="5">Contact</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#header" class="navigation_link" id="1">home</a>
+                    <a href="#Home" class="navigation_link" id="5">Home</a>
                 </li>
             </ul>
         </nav>
     </div>
 
-    <header class="header">
+    <div class="sidetab">
+        <a href="#Contact">
+            <img src="img/iconContactsmall.png" alt="Contact" class="sidetab-icon">
+        </a>
+    </div>
+
+
+    <header class="header" id="Home">
 
         <nav class='header_menu'>
             <div class="header_menu-logo">
@@ -51,7 +54,7 @@
 
             <ul class="header_menu-list">
                 <li class="">
-                    <a href="#Experience">Experience</a>
+                    <a href="#Experience" onClick="window.location.reload()">Experience</a>
                 </li>
                 <li class="">
                     <a href="#Portfolio">Portfolio</a>
@@ -60,7 +63,7 @@
                     <a href="#About">About Me</a>
                 </li>
                 <li class="">
-                    <a href="#Contact">Contact</a>
+                    <a href="#Contact">contact</a>
                 </li>
             </ul>
         </nav>
@@ -87,91 +90,6 @@
         </div>
     </header>
     <main>
-
-        <section id="Experience">
-            <h1>Experience</h1>
-
-            <div class="resume row">
-                <div class="resume_text col-1-of-3">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolorem ut, dolores laudantium velit voluptatibus ex,
-                        quia asperiores laborum officia, nihil harum vero reprehenderit perspiciatis illum non quisquam!
-                        Delectus, harum.
-                    </p>
-                    <br>
-                    <div class="resume_text-btn">
-                        <a type="button" href="#Portfolio" class="btn-action">download resume &darr;</a>
-                    </div>
-                </div>
-                <div class="lightbox resume_cards col-2-of-3 ">
-                    <div class="lightbox_photo lightbox_photo-1 resume_cards card-1">
-                        <h2>
-                            <span>o44social</span>
-                            <span>Marketing & Sales Analyst</span>
-                        </h2>
-                        <ul>
-                            <li> Plan and execute new client acquisitions.</li>
-                            <li> Evaluate and improve businesses' marketing areas.</li>
-                             <li><h6>Dec 2015 - Sep 2016</h6></li>
-                        </ul>
-                    </div>
-                    <div class="lightbox_photo lightbox_photo-2 resume_cards card-2">
-                        <h2>
-                            <span>Moneris</span>
-                            <span>Marketing & Business Development</span>
-                        </h2>
-                        <ul>
-                            <li>Acquire new customers in an assigned territory by visits.</li>
-                            <li>Develop strong customer relationships and future leads.</li>
-                            <li><h6> Aug 2015 - Dec 2015 </h6></li>
-                        </ul>  
-                    </div>
-                    <div class="lightbox_photo lightbox_photo-3 resume_cards card-3">
-                        <h2>
-                            <span> Skyline</span>
-                            <span> Manager & Construction Supervisor </span>
-                        </h2>
-                        <ul>
-                            <li>Recruit and tarin the new candidates.</li>
-                            <li>Network and cold calling around Calgary.</li>
-
-                            <li><h6> Aug 2012 - Jul 2015</h6></li>
-                        </ul>
-                    </div>
-                    <div class="lightbox_photo lightbox_photo-4 resume_cards card-4 ">
-                        <h2>
-                            <span> Wear United</span>
-                            <span>Human Resources</span>
-                        </h2>
-                        <ul>
-                            <li><span> Q</span>ualify and recruit new personel.</li>
-                            <li><span> I</span>mplement programs in leadership, teamwork and communication</li>
-                            <li><h6>Jan 2009- Jun 2012</h6></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="Portfolio">
-            <h1>Portfolio</h1>
-            <img src="img/me.jpg" alt="">
-            <p>
-                I am outgoing, creative, and friendly. I am always in pursuit of mentors who will keep me sharp and share new knowledge.
-                I like to meet new people, make friends and help others to become a better version of themselves. Yet, somehow
-                I ended up in one of the most introverted careers in the industry, in pursuit of improving the “UI-UX of
-                things”.
-            </p>
-            <p>
-                The truth is that I am passionate about programming and I believe that the more we understand others the better developers
-                we become. Whether it is a boss or coworker if we are able to listen and see through their eyes we will be
-                able to create better and cleaner code. As well as if we understand the client's struggles and needs we could
-                bring a Mac/Windows revolution once again.</p>
-
-            <p>
-                Therefore, by harnessing my social background and improving my OOP-Design-Pattern skills, I believe I will be able to develop
-                software that people will love. </p>
-        </section>
         <section id="About">
             <h1>ABOUT ME </h1>
             <img src="img/me.jpg" alt="">
@@ -190,26 +108,196 @@
                 Therefore, by harnessing my social background and improving my OOP-Design-Pattern skills, I believe I will be able to develop
                 software that people will love. </p>
         </section>
-        <section id="Contact">
-            <h1>Contact</h1>
-            <img src="img/me.jpg" alt="">
-            <p>
-                I am outgoing, creative, and friendly. I am always in pursuit of mentors who will keep me sharp and share new knowledge.
-                I like to meet new people, make friends and help others to become a better version of themselves. Yet, somehow
-                I ended up in one of the most introverted careers in the industry, in pursuit of improving the “UI-UX of
-                things”.
-            </p>
-            <p>
-                The truth is that I am passionate about programming and I believe that the more we understand others the better developers
-                we become. Whether it is a boss or coworker if we are able to listen and see through their eyes we will be
-                able to create better and cleaner code. As well as if we understand the client's struggles and needs we could
-                bring a Mac/Windows revolution once again.</p>
 
-            <p>
-                Therefore, by harnessing my social background and improving my OOP-Design-Pattern skills, I believe I will be able to develop
-                software that people will love. </p>
+        <section id="Experience">
+            <h1 class="secondary-head">Skills and Experience</h1>
+            <div class="resume row">
+                <div class="resume_text col-1-of-2">
+
+                    <div class="progressBox" onClick="window.location.reload()">
+                        <div class="progressBar">
+                            <h4>JavaScript</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-80"></div>
+                            </div>
+                        </div>
+
+                        <div class="progressBar">
+                            <h4>Node.js | Json</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-70"></div>
+                            </div>
+                        </div>
+                        <div class="progressBar">
+                            <h4>Java | Android</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-80"></div>
+                            </div>
+                        </div>
+
+                        <div class="progressBar">
+                            <h4>Swift | iOS</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-70"></div>
+                            </div>
+                        </div>
+                        <div class="progressBar">
+                            <h4>Photoshop | Adobe suite </h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-90"></div>
+                            </div>
+                        </div>
+                        <div class="progressBar">
+                            <h4>Shell | Powershell</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-60"></div>
+                            </div>
+                        </div>
+                        <div class="progressBar">
+                            <h4>SQL | PHP</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-70"></div>
+                            </div>
+                        </div>
+                        <div class="progressBar">
+                            <h4>HTML | CSS | SASS</h4>
+                            <div class="progressBar_container">
+                                <div class="progressBar_container-value value-80"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="lightbox_container resume_cards col-1-of-2 ">
+                    <div class="lightbox">
+                        <div class="lightbox_photo lightbox_photo-1 resume_cards card-1">
+                            <h2>
+                                <span>o44social</span>
+                                <span>Marketing & Sales Analyst</span>
+                            </h2>
+                            <ul>
+                                <li> Plan and execute new client acquisitions.</li>
+                                <li> Evaluate and improve businesses' marketing areas.</li>
+                                <li>
+                                    <h6>Dec 2015 - Sep 2016</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lightbox_photo lightbox_photo-2 resume_cards card-2">
+                            <h2>
+                                <span>Moneris</span>
+                                <span>Marketing & Business Development</span>
+                            </h2>
+                            <ul>
+                                <li>Acquire new customers in an assigned territory by visits.</li>
+                                <li>Develop strong customer relationships and future leads.</li>
+                                <li>
+                                    <h6> Aug 2015 - Dec 2015 </h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lightbox_photo lightbox_photo-3 resume_cards card-3">
+                            <h2>
+                                <span> Skyline</span>
+                                <span> Manager & Construction Supervisor </span>
+                            </h2>
+                            <ul>
+                                <li>Recruit and tarin the new candidates.</li>
+                                <li>Network and cold calling around Calgary.</li>
+
+                                <li>
+                                    <h6> Aug 2012 - Jul 2015</h6>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="lightbox_photo lightbox_photo-4 resume_cards card-4 ">
+                            <h2>
+                                <span> Wear United</span>
+                                <span>Human Resources</span>
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span> Q</span>ualify and recruit new personel.</li>
+                                <li>
+                                    <span> I</span>mplement programs in leadership, teamwork and communication</li>
+                                <li>
+                                    <h6>Jan 2009- Jun 2012</h6>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
         </section>
+
+        <section id="Portfolio">
+            <h1>Portfolio</h1>
+            <div class="showcase">
+                <div class="row">
+                    <div class="col-2-of-3">&nbsp;</div>
+                    <div class="col-1-of-3">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">&nbsp;</div>
+                    <div class="col-1-of-2">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-4">&nbsp;</div>
+                    <div class="col-2-of-4">&nbsp;</div>
+                    <div class="col-1-of-4">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="col-1-of-3">&nbsp;</div>
+                    <div class="col-2-of-3">&nbsp;</div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="popup" id="Contact">
+            <div class="popup_content">
+                <a href="#Home" class="btn">Close</a>
+                <div class="main">
+                             <div class="main-bdy">
+                            <div class="main-body-left">
+                                <ul>
+                                    <li><a href="#" class="in"></a></li>
+                                    <li><a href="#" class="v"></a></li>
+                                    <li><a href="#" class="twitter"></a></li>
+                                </ul>
+                                <h1>Contact Me...</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
+                                    minim veniam tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <div class="main-body-right">
+                                <form>
+                                    <input type="text" placeholder="Name" required=" ">
+                                    <input type="email" placeholder="Email" required=" ">
+                                    <textarea placeholder="Message..." required=" "></textarea>
+                                    <input type="submit" value="Submit">
+                                </form>
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div class="copy-right">
+                            
+                        </div>
+                    </div>
+                <div class="resume_text-btn">
+                    <a type="button" href="#Portfolio" class="btn-action lightbox_container-btn">download resume &darr;</a>
+                </div>
+            </div>
+        </section>
+
     </main>
+    <footer class="footer">
+        <p>
+            All rights reserved C Digital Villa 2018 section made wityh love
+        </p>
+    </footer>
+
     <script src="js/main.js"></script>
 </body>
 

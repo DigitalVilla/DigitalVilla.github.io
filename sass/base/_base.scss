@@ -3,7 +3,7 @@
 *::before {
     padding: 0;
     margin: 0;
-    box-sizing: inherit;    
+    box-sizing: inherit;
 }
 
 html {
@@ -15,12 +15,14 @@ body {
     box-sizing: border-box;
 }
 
-header,
-section {
-    padding: 6rem 8rem;
+header {
     height: 100vh;
+}
+
+section {
+    padding: 6rem 14rem;
     font-size: 2rem;
-    /* background: blue; */
+    height: 100% !important;
 }
 
 a {
@@ -31,19 +33,30 @@ li {
     list-style: none;
 }
 
+@media (max-width: $BP1x) {
+    section,
+    header {
+        padding: 6rem 8rem;
+    }
+}
 
-@media (max-width: 850px) {
-    section {
+@media (max-width: $BP1) {
+    section,
+    header {
         padding: 2rem;
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: $BP2) {
     body {
         line-height: 1;
     }
+}
 
-    section {
-        height: 100%;
+@media (max-width: $BP3) {
+    body {
+        line-height: 1;
     }
 }
+
+@media (max-height: $BP2) {}

@@ -1,7 +1,8 @@
 /* colors */
 $color1: #06d59c;
 $color2: #289fb4;
-$color3: #f8365c;
+$color3:  rgb(46, 165, 143);
+$color4: #f8365c;
 $light:rgb(241, 241, 241);
 $dark:rgb(46, 46, 46);
 $gray:#777;
@@ -13,6 +14,9 @@ $gap-H:3rem;
 
 //Media Break Points
 $BP1:850px;
-$BP2:665px;
+$BP2:660px;
 $BP3:590px;
+
+$BP1x: 1200px;
+
 $BP4:340px;

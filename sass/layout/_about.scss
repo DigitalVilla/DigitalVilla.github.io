@@ -1,0 +1,19 @@
+#About {
+
+    h1 {
+        margin: 2rem 0;
+    }
+
+    text-align: center;
+    font-size: 2rem;
+    
+    img {
+        border-radius: 50%;
+        box-shadow: 0 1.5rem 4rem rgba($dark, .4);
+        border: 4px solid $color1;
+    }
+    p {
+        text-align: justify;
+        margin: 2rem 1rem;
+    }
+}

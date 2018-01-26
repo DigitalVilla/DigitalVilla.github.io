@@ -1,0 +1,13 @@
+#Portfolio {
+    h1 {
+        margin: 2rem 0;
+    }
+    div [class^="col-"] {
+        background-image: linear-gradient( to right, rgba($color1, .3), rgba($color2, .3), rgba($color3, .3)), url(../img/herologo.jpg);
+        background-size: cover;
+        background-position: right bottom;
+        height: 30rem;
+        // background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/heroDesk.jpg);
+
+    }
+}

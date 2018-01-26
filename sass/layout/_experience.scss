@@ -1,6 +1,10 @@
 #Experience {
     background: rgb(231, 231, 231);
     color: black;
+    & h1 {
+        padding: 4rem;
+        margin-bottom: 3rem;
+    }
     .resume {
         &_text {
             // background: red;
@@ -8,8 +12,7 @@
         }
         &_cards {
             [class*="card-"] {
-                width: 40rem;
-                 // height: 30rem;
+                // width: 40rem; // height: 30rem;
                 transition: 0.3s;
                 cursor: pointer;
                 color: $dark;
@@ -51,22 +54,60 @@
                     }
                 }
             }
-           & .card-1 {
+            & .card-1 {
                 background-image: linear-gradient( to right bottom, rgba(#000, 0.7), rgba(#000, 0.8)), url(../img/card-1.jpg);
                 background-position: center left;
+                background-size: cover;
             }
             & .card-2 {
                 background-image: linear-gradient( to right bottom, rgba(#000, 0.7), rgba(#000, 0.8)), url(../img/card-2.jpg);
                 background-position: top;
+                background-size: cover;
             }
             & .card-3 {
                 background-image: linear-gradient( to right bottom, rgba(#000, 0.7), rgba(#000, 0.8)), url(../img/card-3.jpg);
                 background-position: top left;
+                background-size: cover;
             }
             & .card-4 {
                 background-image: linear-gradient( to right bottom, rgba(#000, 0.7), rgba(#000, 0.8)), url(../img/card-4.jpg);
                 background-position: center;
+                background-size: cover;
             }
+        }
+    }
+}
+
+@media (max-width: $BP2) {
+    #Experience {
+        & h1 {
+            padding: 2rem !important;
+            margin-bottom: 2rem !important;
+        }
+        .resume_text,
+        .lightbox_container {
+            width: 100% !important;
+        }
+        [class*="card-"] {
+            font-size: 1.7rem;
+             & h2 {
+                font-weight: 300;
+                padding: 1rem;
+                height: 20%;
+                // color: $light;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                & span {
+                    display: block;
+                    &:last-child {
+                        // color: $color1;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+
+
         }
     }
 }
