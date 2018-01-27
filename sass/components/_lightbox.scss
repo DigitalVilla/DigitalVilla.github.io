@@ -58,11 +58,6 @@
                 // position: absolute;
             }
         }
-        
-        &:hover &_photo:not(:hover) {
-            transform: scale(.5);
-            border: 3rem solid red;
-        }
     }
 }
 
@@ -96,13 +91,20 @@
                     top: 12rem;
                     left: 4rem;
                 }
-                // &:hover {
-                //     // z-index: 10;
-                //     // opacity: 1;
-                //     // box-shadow: 0 2.5rem 4rem rgba($dark, .5);
-                //     // transform: scale(1.05) translateY(-.5rem); // transform: scale(1);
-                //     // position: absolute;
-                // }
+                &:hover {
+                    z-index: 10;
+                    opacity: 1;
+                    box-shadow: 0 2.5rem 4rem rgba($dark, .8);
+                    transform: scale(1.05) translateY(-.5rem);
+                    outline : 1rem solid rgba($color1, .7);
+                    outline-offset: 1rem;
+                    border: .2rem solid  rgba($color1, .0);
+                }
+                &:active {
+                    box-shadow: 0 1.5rem 4rem rgba($dark, .4);
+                    transform: scale(1.02) translateY(-.2rem); // transform: scale(1);
+                    // position: absolute;
+                }
                
             }
         }

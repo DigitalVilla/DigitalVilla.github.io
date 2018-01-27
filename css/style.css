@@ -270,16 +270,24 @@ body {
       .lightbox_container .lightbox_photo:active {
         box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
         transform: scale(1.02) translateY(-0.2rem); }
-    .lightbox_container .lightbox:hover .lightbox_container .lightbox_photo:not(:hover) {
-      transform: scale(0.5);
-      border: 3rem solid red; }
 
 @media (max-width: 670px) {
   .lightbox_container .lightbox_photo-2 {
     top: 10rem; }
   .lightbox_container .lightbox_photo-5 {
     top: 12rem;
-    left: 4rem; } }
+    left: 4rem; }
+  .lightbox_container .lightbox_photo:hover {
+    z-index: 10;
+    opacity: 1;
+    box-shadow: 0 2.5rem 4rem rgba(46, 46, 46, 0.8);
+    transform: scale(1.05) translateY(-0.5rem);
+    outline: 1rem solid rgba(6, 213, 156, 0.7);
+    outline-offset: 1rem;
+    border: 0.2rem solid rgba(6, 213, 156, 0); }
+  .lightbox_container .lightbox_photo:active {
+    box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
+    transform: scale(1.02) translateY(-0.2rem); } }
 
 @media (max-width: 660px) {
   .lightbox_container {
