@@ -6,8 +6,34 @@
         background-image: linear-gradient( to right, rgba($color1, .3), rgba($color2, .3), rgba($color3, .3)), url(../img/herologo.jpg);
         background-size: cover;
         background-position: right bottom;
-        height: 30rem;
-        // background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/heroDesk.jpg);
-
+        height: 30rem; // background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/heroDesk.jpg);
     }
+}
+
+
+@media  (max-width: $BP2 ) {
+
+    .row [class*="col-"]:not(:last-child) {
+    
+        
+        margin-right: 1rem;
+    }
+
+    .row:not(:last-child) {
+
+        margin-bottom: 1rem;
+    
+    }
+     & .col-1-of-2 {
+         width: calc((100% - 1rem)/2) !important;
+
+     }   
+     & .col-1-of-3 {
+         width: calc((40% - .5rem)) !important;
+
+     }   
+     & .col-2-of-3 {
+        width: calc((60% - .5rem)) !important;
+     }
+
 }

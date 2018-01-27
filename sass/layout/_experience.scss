@@ -4,6 +4,7 @@
     & h1 {
         padding: 4rem;
         margin-bottom: 3rem;
+        font-size: 4rem;
     }
     .resume {
         &_text {
@@ -14,7 +15,6 @@
             [class*="card-"] {
                 // width: 40rem; // height: 30rem;
                 transition: 0.3s;
-                cursor: pointer;
                 color: $dark;
                 border-radius: 1.5rem;
                 border-bottom-left-radius: 0;
@@ -74,27 +74,27 @@
                 background-position: center;
                 background-size: cover;
             }
+            & .card-5 {
+                background-image: linear-gradient( to right bottom, rgba(#000, 0.7), rgba(#000, 0.8)), url(../img/card-3.jpg);
+                background-position: center;
+                background-size: cover;
+            }
         }
     }
 }
 
 @media (max-width: $BP2) {
     #Experience {
-        & h1 {
-            padding: 2rem !important;
-            margin-bottom: 2rem !important;
-        }
         .resume_text,
         .lightbox_container {
             width: 100% !important;
         }
         [class*="card-"] {
             font-size: 1.7rem;
-             & h2 {
+            & h2 {
                 font-weight: 300;
                 padding: 1rem;
-                height: 20%;
-                // color: $light;
+                height: 20%; // color: $light;
                 font-size: 2rem;
                 margin-bottom: 1rem;
                 & span {
@@ -106,8 +106,28 @@
                     }
                 }
             }
+        }
+    }
+}
 
+@media (max-width: $BP6s) {
+    #Experience {
+        & h1 {
+            padding: 2rem !important;
+            margin-bottom: 1rem !important;
 
         }
+    }
+}
+
+@media (max-width: $BP6s) {
+    #Experience {
+        h1 {
+            font-size: 3.2rem;
+            padding: 0 !important;
+            margin-bottom: 1rem !important;
+
+        }
+    
     }
 }

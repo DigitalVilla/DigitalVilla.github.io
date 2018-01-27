@@ -32,7 +32,3 @@
         width: calc(3 * ((100% - 3 * #{$gap-H}) / 4) + 2 * #{$gap-H});
     }
 }
-
-@media (min-width: $BP1x) {
-    $gap-H:6rem !important;
-}

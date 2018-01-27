@@ -23,6 +23,10 @@
             border-radius: 50%;
             animation: pulse 12s ease infinite;
             border: .4rem solid rgb(255, 255, 255);
+            &:hover {
+                transform: scale(1.1);
+                opacity: 1;
+            }
         }
         &-logo img {
             height: 95%;
