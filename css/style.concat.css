@@ -271,16 +271,24 @@ body {
       .lightbox_container .lightbox_photo:active {
         box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
         transform: scale(1.02) translateY(-0.2rem); }
-    .lightbox_container .lightbox:hover .lightbox_container .lightbox_photo:not(:hover) {
-      transform: scale(0.5);
-      border: 3rem solid red; }
 
 @media (max-width: 670px) {
   .lightbox_container .lightbox_photo-2 {
     top: 10rem; }
   .lightbox_container .lightbox_photo-5 {
     top: 12rem;
-    left: 4rem; } }
+    left: 4rem; }
+  .lightbox_container .lightbox_photo:hover {
+    z-index: 10;
+    opacity: 1;
+    box-shadow: 0 2.5rem 4rem rgba(46, 46, 46, 0.8);
+    transform: scale(1.05) translateY(-0.5rem);
+    outline: 1rem solid rgba(6, 213, 156, 0.7);
+    outline-offset: 1rem;
+    border: 0.2rem solid rgba(6, 213, 156, 0); }
+  .lightbox_container .lightbox_photo:active {
+    box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
+    transform: scale(1.02) translateY(-0.2rem); } }
 
 @media (max-width: 660px) {
   .lightbox_container {
@@ -440,13 +448,39 @@ body {
     border-radius: .5rem;
     width: 75%;
     height: 80%;
-    background-color: aliceblue; }
+    background-color: transparent; }
+    .popup_content-exitBtn {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: #ddd;
+      height: 4rem;
+      width: 4rem !important;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: .2rem;
+      box-shadow: 0 0.5rem 1rem rgba(46, 46, 46, 0.1);
+      color: #f8365c;
+      opacity: .4;
+      transition: all 0.2s; }
+      .popup_content-exitBtn:hover {
+        opacity: 1;
+        box-shadow: 0 0.5rem 1rem rgba(46, 46, 46, 0.2); }
+
+@media (max-width: 670px) {
+  .popup_content-exitBtn {
+    top: 1rem;
+    right: 1rem;
+    opacity: .5;
+    height: 3rem;
+    width: 3rem !important;
+    padding-top: .25rem;
+    font-size: 1.5rem; } }
 
 @media (max-height: 520px) {
   .popup_content {
     width: 75%;
-    height: 80%;
-    background-color: aliceblue; } }
+    height: 80%; } }
 
 .sidetab {
   position: fixed;
@@ -581,6 +615,107 @@ body {
       opacity: .5;
       width: 65% !important;
       right: 0; } }
+
+.formStyle {
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .formStyle fieldset {
+    border: none; }
+    .formStyle fieldset legend {
+      color: #FFF;
+      height: 5rem;
+      font-size: 3.3rem;
+      margin-bottom: 3rem;
+      display: inline-block;
+      text-transform: uppercase; }
+    .formStyle fieldset input[type="text"],
+    .formStyle fieldset input[type="date"],
+    .formStyle fieldset input[type="datetime"],
+    .formStyle fieldset input[type="email"],
+    .formStyle fieldset input[type="number"],
+    .formStyle fieldset input[type="search"],
+    .formStyle fieldset input[type="time"],
+    .formStyle fieldset input[type="url"],
+    .formStyle fieldset textarea,
+    .formStyle fieldset select {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      margin: 0;
+      outline: 0;
+      padding: .7rem;
+      height: 5rem;
+      background-color: #e8eeef;
+      color: #71777b;
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+      margin-bottom: 2rem; }
+      .formStyle fieldset input[type="text"]:focus,
+      .formStyle fieldset input[type="date"]:focus,
+      .formStyle fieldset input[type="datetime"]:focus,
+      .formStyle fieldset input[type="email"]:focus,
+      .formStyle fieldset input[type="number"]:focus,
+      .formStyle fieldset input[type="search"]:focus,
+      .formStyle fieldset input[type="time"]:focus,
+      .formStyle fieldset input[type="url"]:focus,
+      .formStyle fieldset textarea:focus,
+      .formStyle fieldset select:focus {
+        background: #d2d9dd; }
+      .formStyle fieldset input[type="text"]:hover,
+      .formStyle fieldset input[type="date"]:hover,
+      .formStyle fieldset input[type="datetime"]:hover,
+      .formStyle fieldset input[type="email"]:hover,
+      .formStyle fieldset input[type="number"]:hover,
+      .formStyle fieldset input[type="search"]:hover,
+      .formStyle fieldset input[type="time"]:hover,
+      .formStyle fieldset input[type="url"]:hover,
+      .formStyle fieldset textarea:hover,
+      .formStyle fieldset select:hover {
+        border: 1px solid rgba(6, 213, 156, 0.5); }
+    .formStyle fieldset textarea {
+      height: 100% !important;
+      width: 100%; }
+    .formStyle fieldset select {
+      -webkit-appearance: menulist-button;
+      height: 5rem;
+      width: 100%; }
+    .formStyle fieldset .number {
+      background: #06d59c;
+      color: #fff;
+      height: 3rem;
+      width: 3rem;
+      display: inline-block;
+      font-size: 2rem;
+      margin-right: 1rem;
+      line-height: 3rem;
+      text-align: center;
+      border-radius: 0 1.5rem 1.5rem 0px; }
+  .formStyle input[type="submit"],
+  .formStyle input[type="button"],
+  .formStyle .download-btn {
+    height: 6rem;
+    position: relative;
+    display: block;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-bottom: 1rem; }
+    .formStyle input[type="submit"]:hover,
+    .formStyle input[type="button"]:hover,
+    .formStyle .download-btn:hover {
+      background: #109177; }
 
 #Experience {
   background: #e7e7e7;
