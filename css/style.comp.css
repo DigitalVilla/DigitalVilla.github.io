@@ -92,7 +92,7 @@ header {
   height: 100vh; }
 
 section {
-  padding: 6rem 14rem;
+  padding: 6rem 26rem;
   font-size: 2rem;
   height: 100% !important; }
 
@@ -237,28 +237,49 @@ body {
       box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
       width: 75% !important;
       position: absolute;
-      transition: all .2s;
-      z-index: 2S; }
+      transition: all .1s;
+      z-index: 2S;
+      border: 0.3rem solid rgba(6, 213, 156, 0.7); }
       .lightbox_container .lightbox_photo-1 {
         left: 3rem;
-        top: -2rem;
-        z-index: 7; }
+        top: -1rem;
+        z-index: 5; }
       .lightbox_container .lightbox_photo-2 {
         left: 0;
-        top: 10rem;
+        top: 15rem;
         z-index: 2; }
       .lightbox_container .lightbox_photo-3 {
         left: 20%;
         top: 20rem; }
       .lightbox_container .lightbox_photo-4 {
         right: 0;
-        top: 5rem;
+        top: 10rem;
         z-index: 3; }
+      .lightbox_container .lightbox_photo-5 {
+        left: 6rem;
+        top: 4rem;
+        z-index: 9; }
       .lightbox_container .lightbox_photo:hover {
         z-index: 10;
         opacity: 1;
-        box-shadow: 0 2.5rem 4rem rgba(46, 46, 46, 0.5);
-        transform: scale(1.05) translateY(-0.5rem); }
+        box-shadow: 0 2.5rem 4rem rgba(46, 46, 46, 0.8);
+        transform: scale(1.05) translateY(-0.5rem);
+        outline: 1rem solid rgba(6, 213, 156, 0.7);
+        outline-offset: 1rem;
+        border: 0.2rem solid rgba(6, 213, 156, 0); }
+      .lightbox_container .lightbox_photo:active {
+        box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
+        transform: scale(1.02) translateY(-0.2rem); }
+    .lightbox_container .lightbox:hover .lightbox_container .lightbox_photo:not(:hover) {
+      transform: scale(0.5);
+      border: 3rem solid red; }
+
+@media (max-width: 670px) {
+  .lightbox_container .lightbox_photo-2 {
+    top: 10rem; }
+  .lightbox_container .lightbox_photo-5 {
+    top: 12rem;
+    left: 4rem; } }
 
 @media (max-width: 660px) {
   .lightbox_container {
@@ -270,7 +291,6 @@ body {
       position: relative; }
       .lightbox_container .lightbox_photo {
         box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
-        width: 75% !important;
         position: absolute;
         transition: all .2s;
         z-index: 2S; }
@@ -418,8 +438,14 @@ body {
     transform: translate(-50%, -50%);
     border-radius: .5rem;
     width: 75%;
-    height: 50rem;
+    height: 80%;
     background-color: aliceblue; }
+
+@media (max-height: 520px) {
+  .popup_content {
+    width: 75%;
+    height: 80%;
+    background-color: aliceblue; } }
 
 .sidetab {
   position: fixed;
@@ -427,15 +453,15 @@ body {
   padding: 1rem;
   height: 7rem;
   width: 1rem;
-  background: #06d59c;
-  top: 80%;
+  background: #f8365c;
+  top: 70%;
   left: 0;
   cursor: pointer;
   transition: all .4s;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
-  opacity: .7;
-  box-shadow: 0 1.4rem 2rem rgba(46, 46, 46, 0.3); }
+  opacity: .8;
+  box-shadow: 0 1.4rem 1rem rgba(46, 46, 46, 0.5); }
   .sidetab img {
     transition: all .2s;
     width: 100%;
@@ -444,13 +470,13 @@ body {
     opacity: 1;
     padding: 1rem;
     width: 7rem;
-    background-image: linear-gradient(160deg, #3dc9af, #06d59c 60%);
+    background-image: linear-gradient(top right, #f71d48, #f8365c);
     border-top-right-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
-    box-shadow: 0 1.5rem 2rem rgba(46, 46, 46, 0.4);
+    box-shadow: 0 1.5rem 2rem rgba(46, 46, 46, 0.6);
     z-index: 200; }
   .sidetab:active {
-    top: 81%; }
+    top: 71%; }
 
 .progressBox {
   background: #efefef;
@@ -458,7 +484,7 @@ body {
   border-radius: 10px;
   border: solid 5px #dbdbdb; }
   .progressBox:hover {
-    box-shadow: 0 2.5rem 4rem rgba(46, 46, 46, 0.5); }
+    box-shadow: 0 1.5rem 2rem rgba(46, 46, 46, 0.3); }
   .progressBox .progressBar {
     margin-bottom: 1.5rem; }
     .progressBox .progressBar h4 {
@@ -468,6 +494,8 @@ body {
       padding-left: 1rem;
       font-weight: bold;
       color: #6a6a6a; }
+      .progressBox .progressBar h4:hover {
+        color: #05a378; }
     .progressBox .progressBar_container {
       height: 3rem;
       border-radius: 5px;
@@ -482,8 +510,11 @@ body {
         background-image: linear-gradient(160deg, #2ea58f, #06d59c 60%);
         transition: all .3s; }
         .progressBox .progressBar_container-value:hover {
-          width: 100%;
+          width: 95%;
           background: #06d59c; }
+        .progressBox .progressBar_container-value:active {
+          width: 50%;
+          transform: scaleY(1.05); }
 
 .value-10 {
   width: 10%; }
@@ -520,23 +551,45 @@ body {
   font-size: 2rem; }
   #About h1 {
     margin: 2rem 0; }
-  #About img {
+  #About .profilepic {
     border-radius: 50%;
     box-shadow: 0 1.5rem 4rem rgba(46, 46, 46, 0.4);
     border: 4px solid #06d59c; }
   #About p {
     text-align: justify;
     margin: 2rem 1rem; }
+  #About .signature {
+    text-align: right;
+    padding-right: 2rem; }
+    #About .signature_name {
+      padding: 1rem 5rem; }
+    #About .signature_sign {
+      opacity: .5;
+      width: 40%;
+      right: 0; }
+
+@media (max-width: 440px) {
+  .profilepic {
+    width: 80%; }
+  .signature {
+    text-align: right;
+    padding-right: 0 !important; }
+    .signature_name {
+      padding: 0 4rem 1rem 0 !important; }
+    .signature_sign {
+      opacity: .5;
+      width: 65% !important;
+      right: 0; } }
 
 #Experience {
   background: #e7e7e7;
   color: black; }
   #Experience h1 {
     padding: 4rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    font-size: 4rem; }
   #Experience .resume_cards [class*="card-"] {
     transition: 0.3s;
-    cursor: pointer;
     color: #2e2e2e;
     border-radius: 1.5rem;
     border-bottom-left-radius: 0;
@@ -582,11 +635,12 @@ body {
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-4.jpg);
     background-position: center;
     background-size: cover; }
+  #Experience .resume_cards .card-5 {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/card-3.jpg);
+    background-position: center;
+    background-size: cover; }
 
 @media (max-width: 660px) {
-  #Experience h1 {
-    padding: 2rem !important;
-    margin-bottom: 2rem !important; }
   #Experience .resume_text,
   #Experience .lightbox_container {
     width: 100% !important; }
@@ -603,6 +657,17 @@ body {
         #Experience [class*="card-"] h2 span:last-child {
           font-size: 1.3rem;
           font-weight: 400; } }
+
+@media (max-width: 670px) {
+  #Experience h1 {
+    padding: 2rem !important;
+    margin-bottom: 1rem !important; } }
+
+@media (max-width: 670px) {
+  #Experience h1 {
+    font-size: 3.2rem;
+    padding: 0 !important;
+    margin-bottom: 1rem !important; } }
 
 .footer {
   background-color: #06d59c; }
@@ -661,6 +726,9 @@ body {
       border-radius: 50%;
       animation: pulse 12s ease infinite;
       border: 0.4rem solid white; }
+      .header_menu-logo:hover {
+        transform: scale(1.1);
+        opacity: 1; }
     .header_menu-logo img {
       height: 95%; }
     .header_menu-list {
@@ -785,7 +853,7 @@ body {
   .header_mobile-title {
     display: block; } }
 
-@media (max-width: 340px) {
+@media (max-width: 440px) {
   .header_mobile-title {
     display: block; } }
 
@@ -797,3 +865,15 @@ body {
   background-size: cover;
   background-position: right bottom;
   height: 30rem; }
+
+@media (max-width: 660px) {
+  .row [class*="col-"]:not(:last-child) {
+    margin-right: 1rem; }
+  .row:not(:last-child) {
+    margin-bottom: 1rem; }
+  .col-1-of-2 {
+    width: calc((100% - 1rem)/2) !important; }
+  .col-1-of-3 {
+    width: calc((40% - .5rem)) !important; }
+  .col-2-of-3 {
+    width: calc((60% - .5rem)) !important; } }
