@@ -1,5 +1,13 @@
 console.log("conected");
 
+addEventListener("load", function () {
+    setTimeout(hideURLbar, 0);
+}, false);
+
+function hideURLbar() {
+    window.scrollTo(0, 1);
+}
+
 var menu = document.querySelector("#nav-toggle");
 
 document.addEventListener('click', function (e) {
@@ -8,23 +16,6 @@ document.addEventListener('click', function (e) {
     }
 });
 
-
-// var p = document.getElementsByTagName('p')[0];
-// p.onclick = function() {
-//  // Trigger the `hover` event on the paragraph
-//  p.onhover.call(p);
-// };
-
-
-
-//mobile function
-
-// $(document).ready(function() {
-//     $('.hover').bind('touchstart touchend', function(e) {
-//         e.preventDefault();
-//         $(this).toggleClass('hover_effect');
-//     });
-// });
 var lightbox = document.getElementsByClassName("lightbox_photo");
 lightbox.onclick = function () {
     lightbox.onhover.call(lightbox);

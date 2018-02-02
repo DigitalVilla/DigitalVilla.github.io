@@ -8,6 +8,7 @@
     align-items: center;
     &_menu {
         top: 0;
+        position: fixed;
         display: flex;
         align-items: center;
         justify-content: space-between;
