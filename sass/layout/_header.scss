@@ -206,7 +206,7 @@
 
 /* iPhone / mobile webkit */
 
-@media screen and (max-device-width: 740px) {
+@media screen and (max-device-width: 480px) {
     .header {
         background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/heroDesk.jpg);
         // background-attachment: fixed;

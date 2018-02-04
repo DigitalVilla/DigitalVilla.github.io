@@ -1003,7 +1003,7 @@ body {
     display: block; } }
 
 /* iPhone / mobile webkit */
-@media screen and (max-device-width: 740px) {
+@media screen and (max-device-width: 480px) {
   .header {
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/heroDesk.jpg);
     background-position: center;
