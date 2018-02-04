@@ -1,7 +1,6 @@
 .header {
     background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/heroDesk.jpg);
     background-attachment: fixed;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,7 +101,6 @@
             border-radius: 50%;
             border: 1rem solid rgb(255, 255, 255);
             animation: 1s slidefadeR .5s forwards;
-            
         }
         &-logo img {
             height: 95%;
@@ -117,7 +115,6 @@
         }
     }
 }
-
 
 /* //---Media  */
 
@@ -202,8 +199,19 @@
 @media (max-width: $BP4) {
     .header {
         &_mobile-title {
-            display: block;
-            // background: red;
+            display: block; // background: red;
         }
+    }
+}
+
+/* iPhone / mobile webkit */
+
+@media screen and (max-device-width: 740px) {
+    .header {
+        background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/heroDesk.jpg);
+        // background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
