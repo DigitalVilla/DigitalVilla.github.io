@@ -7,8 +7,9 @@
         height: 30rem;
     }
     & .slider {
+        margin: 0 auto;
         position: relative;
-        background: #000;
+         background: #000;
         background-image: linear-gradient( to bottom, rgba(#000, .1), rgba(#000, .7) 80%), url(../img/herologo.jpg); // background-attachment: fixed;
         background-position: top right ;
         background-repeat: no-repeat;
