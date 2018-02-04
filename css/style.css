@@ -718,7 +718,6 @@ body {
 
 #Experience {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/card-4.jpg);
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -808,15 +807,23 @@ body {
     padding: 0 !important;
     margin-bottom: 1rem !important; } }
 
+@media (min-width: 740px) {
+  #Experience {
+    background-attachment: fixed; } }
+
 .footer {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/herologo.jpg);
   background-attachment: fixed;
-  background-position: top right;
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover; }
   .footer p {
     color: #fff;
     font-size: 2rem; }
+
+@media (min-width: 740px) {
+  .footer {
+    background-attachment: fixed; } }
 
 .row {
   max-width: 100%;
@@ -1004,11 +1011,7 @@ body {
 /* iPhone / mobile webkit */
 @media (min-width: 740px) {
   .header {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/heroDesk.jpg);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; } }
+    background-attachment: fixed; } }
 
 #Portfolio {
   height: 100%; }
@@ -1020,7 +1023,6 @@ body {
     position: relative;
     background: #000;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7) 80%), url(../img/herologo.jpg);
-    background-attachment: fixed;
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1095,6 +1097,10 @@ body {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(../img/androidCalc.png); }
       #Portfolio .slider .mySlides-8 {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.4)), url(../img/Xilophone.jpg); }
+
+@media (min-width: 740px) {
+  #Portfolio .slider {
+    background-attachment: fixed; } }
 
 @media (max-width: 660px) {
   .row [class*="col-"]:not(:last-child) {

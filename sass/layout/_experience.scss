@@ -1,7 +1,5 @@
 #Experience {
     background-image: linear-gradient( to right bottom, rgba(#000, 0.4), rgba(#000, 0.3)), url(../img/card-4.jpg);
-    background-attachment: fixed;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -135,5 +133,11 @@
 
         }
     
+    }
+}
+
+@media (min-width: 740px) {
+    #Experience {
+        background-attachment: fixed;
     }
 }
