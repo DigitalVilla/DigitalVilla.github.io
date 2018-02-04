@@ -1003,9 +1003,9 @@ body {
     display: block; } }
 
 /* iPhone / mobile webkit */
-@media screen and (max-device-width: 480px) {
+@media (max-width: 740px) {
   .header {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/heroDesk.jpg);
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(../img/heroDeskS.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; } }
