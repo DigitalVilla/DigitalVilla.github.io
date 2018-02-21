@@ -4,6 +4,7 @@
   "description": "landing page for online portfolio",
   "main": "index.js",
   "scripts": {
+    "aos:sass": "node-sass sass/sass/aos.scss css/aos.css",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "startdev": "npm-run-all --parallel devserver watch:sass",
