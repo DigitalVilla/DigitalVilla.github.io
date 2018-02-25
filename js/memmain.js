@@ -1,3 +1,4 @@
+let run = false;
 let sec = 0;
 let pair = 0;
 let count = 0;
@@ -79,15 +80,16 @@ let memorax = {
         return array;
     },
     startTime: function () {
-        ++sec;
-        timer.innerHTML = "Time: " + format(parseInt(sec / 60)) + ":" + format(sec % 60);
-
-        function format(val) {
-            var valString = val + "";
-            if (valString.length < 2) {
-                return "0" + valString;
-            } else {
-                return valString;
+        if (run == true) {
+            ++sec;
+            timer.innerHTML = "Time: " + format(parseInt(sec / 60)) + ":" + format(sec % 60);
+            function format(val) {
+                var valString = val + "";
+                if (valString.length < 2) {
+                    return "0" + valString;
+                } else {
+                    return valString;
+                }
             }
         }
     }
@@ -106,7 +108,7 @@ init = () => {
     turns = document.getElementById('turns');
     pairs = document.getElementById('pairs');
     scores = document.getElementById('score');
-
+    run = true;
     gamePad.innerHTML = "";
 
     cards = [{
@@ -159,7 +161,9 @@ init = () => {
         },
     ];
     memorax.createDeck(cards, 0);
+
     setInterval(memorax.startTime, 1000);
+
 }
 init();
 
@@ -204,6 +208,7 @@ document.addEventListener('click', (e) => {
             pairs.innerHTML = "Pairs Left:" + ((--pair < 10) ? "0" + pair : pair + "");
             score += 300;
             if (pair <= 0) {
+                run = false;
                 setTimeout(() => {
                     memorax.createField();
                 }, 3000);
