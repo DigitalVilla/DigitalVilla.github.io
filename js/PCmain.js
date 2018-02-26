@@ -4,18 +4,6 @@ let currency = [];
 let limit = 0;
 let id = 0;
 
-(function () {
-  document.addEventListener("click", function (e) {
-    if (e.target.id == "add" && limit < 4) {
-      limit++;
-      PC.addCurrency(body, "body", id++, "Change", "readonly");
-    } else if (e.target.id == "delete" && limit >= 1) {
-      body.removeChild(body.lastChild);
-      limit--;
-    }
-  });
-}());
-
 let PC = {
   addCurrency: function (parent, subClass, id, holder, reader) {
     let div = document.createElement('div');
@@ -45,6 +33,21 @@ let PC = {
     let d = new Date();
     let dd = d.toDateString().slice(4) + " " + d.getHours() + d.toGMTString().slice(19, 26);
     document.querySelector('.date').innerHTML = dd;
+  }
+}
+
+//button functions 
+function pcAdd() {
+  if (limit < 4) {
+    limit++;
+    PC.addCurrency(body, "body", id++, "Change", "readonly");
+  }
+}
+
+function pcDelete () {
+  if (limit >= 1) {
+    body.removeChild(body.lastChild);
+    limit--;
   }
 }
 
