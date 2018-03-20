@@ -1,354 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <meta name="apple-mobile-web-app-title" content="Digital Villa">
-    <link rel="apple-touch-icon" href="img/icon.png">
-    <link rel="icon" type="image/png" href="img/icon.png">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>InstaGramic</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="/src/css/app.css">
+  <link rel="stylesheet" href="/src/css/feed.css">
+  <link rel="manifest" href="/manifest.json">
 
-    <title>Digital Villa | Prototype</title>
 </head>
-
 <body>
-    <div class="navigation">
-        <input type="checkbox" class="navigation_checkbox" style="opacity: 0;" id="nav-toggle">
-        <label for="nav-toggle" class="navigation_button">
-            <span class="navigation_icon">&nbsp;</span>
-        </label>
-        <div class="navigation_background">&nbsp;</div>
 
-        <nav class="navigation_nav">
-            <ul class="navigation_list">
-                <li class="navigation_item">
-                    <a href="#Experience" class="navigation_link" id="2" >Experience</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#Portfolio" class="navigation_link" id="3">Portfolio</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="/pocketChange.html" class="navigation_link" id="4">Pocket</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="/memory.html" class="navigation_link" id="5">Memory</a>
-                </li>
-                <li class="navigation_item">
-                    <a href="#Home" class="navigation_link" id="6">Home</a>
-                </li>
-            </ul>
+<div id="app">
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">InstaGramic</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="/">Feed</a>
+          <a class="mdl-navigation__link" href="/help">Help</a>
+          <div class="drawer-option">
+            <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
+              Enable Notifications
+            </button>
+          </div>
         </nav>
-    </div>
-
-    <div class="sidetab">
-        <a href="#Contact">
-            <img src="img/iconContactsmall.png" alt="Contact" class="sidetab-icon">
-        </a>
-    </div>
-
-
-    <header class="header" id="Home">
-        
-        <nav class='header_menu'>
-            <div class="header_menu-logo">
-                <img src="img/VlogoW.png" alt="Logo">
-            </div>
-
-            <ul class="header_menu-list">
-                <li class="">
-                    <a href="#Experience" >Experience</a>
-                </li>
-                <li class="">
-                    <a href="#Portfolio">Portfolio</a>
-                </li>
-                <li class="">
-                    <a href="/pocketChange.html">Pocket</a>
-                </li>
-                <li class="">
-                    <a href="/memory.html">Memory</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="header_title">
-            <h1>
-                <span>Omar Villanueva </span>
-                <span>Developer & Product Designer </span>
-            </h1>
-            <div class="header_title-btn">
-                <a type="button" href="#Portfolio" class="btn btn--white btn--animated"> View Portfolio</a>
-            </div>
-        </div>
-
-
-        <div class="header_mobile-title">
-            <div class="header_mobile-title-logo">
-                <img src="img/VlogoW.png" alt="Logo">
-            </div>
-            <h1>Villanueva</h1>
-            <div class="header_mobile-title-btn">
-                <a type="button" href="#Portfolio" class="btn btn--white btn--animated"> View Portfolio</a>
-            </div>
-        </div>
+      </div>
     </header>
-    <main>
-        <section id="About">
-            <h1>ABOUT ME </h1>
-            <img src="img/me.jpg" alt="profile pictue" class="profilepic">
-            <p>
-                I am outgoing, creative, and friendly. I am always in pursuit of mentors who will keep me sharp and share new knowledge.
-                I like to meet new people, make friends and help others to become a better version of themselves. Yet, somehow
-                I ended up in one of the most introverted careers in the industry, in pursuit of improving the “UI-UX of
-                things”.
-            </p>
-            <p>
-                The truth is that I am passionate about programming and I believe that the more we understand others the better developers
-                we become. Whether it is a boss or coworker if we are able to listen and see through their eyes we will be
-                able to create better and cleaner code. As well as if we understand the client's struggles and needs we could
-                bring a Mac/Windows revolution once again.</p>
-            <p>
-                Therefore, by harnessing my social background and improving my OOP-Design-Pattern skills, I believe I will be able to develop
-                software that people will love. </p>
-            <div class="signature">
-                <h4 class="signature_name">
-                    <em>Omar Villanueva</em>
-                </h4>
-                <img src="/img/sign.jpg" alt="" class="signature_sign">
-            </div>
-        </section>
-
-        <section id="Experience">
-            <h1 class="secondary-head">Skills and Experience</h1>
-            <div class="resume row">
-                <div class="resume_text col-1-of-2">
-
-                    <div class="progressBox">
-                        <div class="progressBar">
-                            <h4>JavaScript</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-80"></div>
-                            </div>
-                        </div>
-
-                        <div class="progressBar">
-                            <h4>Node.js | Json</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-70"></div>
-                            </div>
-                        </div>
-                        <div class="progressBar">
-                            <h4>Java | Android</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-80"></div>
-                            </div>
-                        </div>
-
-                        <div class="progressBar">
-                            <h4>Swift | iOS</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-70"></div>
-                            </div>
-                        </div>
-                        <div class="progressBar">
-                            <h4>Photoshop | Adobe suite </h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-90"></div>
-                            </div>
-                        </div>
-                        <div class="progressBar">
-                            <h4>Shell | Powershell</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-60"></div>
-                            </div>
-                        </div>
-                        <div class="progressBar">
-                            <h4>SQL | PHP</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-70"></div>
-                            </div>
-                        </div>
-                        <div class="progressBar">
-                            <h4>HTML | CSS | SASS</h4>
-                            <div class="progressBar_container">
-                                <div class="progressBar_container-value value-80"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                </div>
-                <div class="lightbox_container resume_cards col-1-of-2 ">
-                    <div class="lightbox">
-                        <div class="lightbox_photo lightbox_photo-1 resume_cards card-1">
-                            <h2>
-                                <span>o44social</span>
-                                <span>Marketing & Sales Analyst</span>
-                            </h2>
-                            <ul>
-                                <li> Plan and execute new client acquisitions.</li>
-                                <li> Evaluate and improve businesses' marketing areas.</li>
-                                <li>
-                                    <h6>March 2016 - Jan 2017</h6>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="lightbox_photo lightbox_photo-2 resume_cards card-2">
-                            <h2>
-                                <span>Moneris</span>
-                                <span>Marketing & Business Development</span>
-                            </h2>
-                            <ul>
-                                <li>Acquire new customers in an assigned territory by visits.</li>
-                                <li>Develop strong customer relationships and future leads.</li>
-                                <li>
-                                    <h6> Aug 2015 - March 2016 </h6>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="lightbox_photo lightbox_photo-3 resume_cards card-3">
-                            <h2>
-                                <span> Skyline</span>
-                                <span> Manager & Construction Supervisor </span>
-                            </h2>
-                            <ul>
-                                <li>Recruit and tarin the new candidates.</li>
-                                <li>Network and cold calling around Calgary.</li>
-
-                                <li>
-                                    <h6> Aug 2012 - Jul 2015</h6>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="lightbox_photo lightbox_photo-4 resume_cards card-4 ">
-                            <h2>
-                                <span>United Wear</span>
-                                <span>Human Resources</span>
-                            </h2>
-                            <ul>
-                                <li>
-                                    Qualify and recruit new personel.</li>
-                                <li>
-                                    Implement programs in leadership, teamwork and communication</li>
-                                <li>
-                                    <h6>Jan 2009- Jun 2012</h6>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="lightbox_photo lightbox_photo-5 resume_cards card-5 ">
-                            <h2>
-                                <span>Digital Villa</span>
-                                <span> Freelance| Self employed </span>
-                            </h2>
-                            <ul>
-                                <li>
-                                    For a responsive website, simple mobile app, or a modern graphic desig</li>
-                                <li>
-                                    Send me a message!</li>
-                                <li>
-                                    <h6>Jan 2009- Jun 2012</h6>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-        </section>
-
-        <section id="Portfolio">
-            <h1 class="secondary-head">Portfolio</h1>
-
-            <div class="slider slider-display-container" style="max-width:800px">
-
-                <div id="cover"class="mySlides mySlides-9"></div>
-                <div class="mySlides mySlides-1">&nbsp;</div>
-                <div class="mySlides mySlides-2">&nbsp;</div>
-                <div class="mySlides mySlides-3">&nbsp;</div>
-                <div class="mySlides mySlides-4">&nbsp;</div>
-                <div class="mySlides mySlides-5">&nbsp;</div>
-                <div class="mySlides mySlides-6">&nbsp;</div>
-                <div class="mySlides mySlides-7">&nbsp;</div>
-                <div class="mySlides mySlides-8">&nbsp;</div>
-
-                <div class="slider-nav">
-                    <div class="slider-nav-dir-left" onclick="plusDivs(-1)">&#10094;</div>
-                    <div class="slider-nav-pager">
-                        <div onclick="currentDiv(1)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(2)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(3)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(4)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(5)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(6)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(7)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(8)" class="slider-nav-pager-divs"></div>
-                        <div onclick="currentDiv(9)" class="slider-nav-pager-divs"></div>
-                    </div>
-                    <div class="slider-nav-dir-right" onclick="plusDivs(1)">&#10095;</div>
-
-                </div>
-            </div>
-
-
-
-        </section>
-
-        <section class="popup" id="Contact">
-            <div class="popup_content">
-                <a type="button" href="#Home" class="popup_content-exitBtn">X</a>
-
-                <div class="formStyle">
-                    <form>
-                        <fieldset>
-                            <legend>
-                                <span class="number">#</span> Connect:</legend>
-
-                            <div class="row">
-                                <select id="job" name="field4">
-                                    <optgroup label="Subject">
-                                        <option value="subject">General Subject</option>
-                                        <option value="project">Project Request</option>
-                                        <option value="job">Job Offer</option>
-                                        <option value="other">Other...</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-
-                            <div class="row">
-                                <input class="col-1-of-2" type="text" required="" name="field1" placeholder="Your Name *">
-                                <input class="col-1-of-2" type="email" required=" " name="field2" placeholder="Your Email *">
-                            </div>
-
-
-                            <textarea name="field3" required=" " placeholder="Your Messsage:"></textarea>
-                        </fieldset>
-
-                        <div class="row">
-
-                            <input class="col-1-of-3" type="submit" value="Submit" />
-                            <input class="col-2-of-3" type="button" value="Get My Resume!" onclick="window.location = 'package.json';">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">PWAGram</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/">Feed</a>
+        <a class="mdl-navigation__link" href="/help">Help</a>
+        <div class="drawer-option">
+          <button class="enable-notifications mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent">
+            Enable Notifications
+          </button>
+        </div>
+      </nav>
+    </div>
+    <main class="mdl-layout__content mat-typography">
+      <div id="create-post">
+        <form>
+          <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="title">
+            <label class="mdl-textfield__label" for="title" name="title">Title</label>
+          </div>
+          <div class="input-section mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="manual-location">
+            <input class="mdl-textfield__input" type="text" id="location">
+            <label class="mdl-textfield__label" for="location" name="location">Location</label>
+          </div>
+          <br>
+          <div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--accent"
+                    type="submit" id="post-btn">Post!
+            </button>
+          </div>
+          <br>
+          <div>
+            <button class="mdl-button mdl-js-button mdl-button--fab" id="close-create-post-modal-btn" type="button">
+              <i class="material-icons">close</i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <img src="/src/images/main-image.jpg"
+           alt="Explore the City"
+           class="main-image">
+      <div class="page-content">
+        <h5 class="text-center mdl-color-text--primary">Share your Moments</h5>
+        <div id="shared-moments"></div>
+      </div>
+      <div class="floating-button">
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"
+                id="share-image-button">
+          <i class="material-icons">add</i>
+        </button>
+      </div>
+      <div id="confirmation-toast" aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button type="button" class="mdl-snackbar__action"></button>
+      </div>
     </main>
-    <footer class="footer">
-        <br>
-        <p>
-            &copy; Digital Villa 2018 | All Rights Reserved
-            <br> Responsive Website made with Love... and no Bootstrap!
-        </p>
-        <br>
-    </footer>
-
-    <script src="js/main.js"></script>
+  </div>
+</div>
+<script defer src="/src/js/material.min.js"></script>
+<script src="/src/js/app.js"></script>
+<script src="/src/js/feed.js"></script>
 </body>
-
 </html>
