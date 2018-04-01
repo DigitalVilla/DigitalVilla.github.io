@@ -1,0 +1,94 @@
+html,
+body,
+header,
+#camera {
+    height: 100%;
+}
+
+body {
+    background-color: #ebebeb !important;
+}
+
+#camera {
+    background: url("/Eyedentify/img/home/owl.gif")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+}
+
+.btn-no-shadow {
+    border: none;
+    box-shadow: none;
+}
+
+.btn-no-shadow:enabled {
+    border: none;
+    box-shadow: none;
+    padding-left:
+}
+
+#galleryBtn {
+    width: 7rem !important;
+    border-top-left-radius: 10rem !important;
+    border-top-right-radius: 10rem !important;
+    box-shadow: none;
+}
+
+.myIndex {
+    height: 100vh !important;
+    overflow: hidden !important;
+}
+
+/* //more Innfo */
+
+.card {
+    margin-top: 1.4rem;
+    background-color: #ebebeb;
+}
+
+.card-header {
+    background-color: #ebebeb;
+    background-color: #5fc48c;
+    background-color: #ebebeb;
+}
+
+.card-header h4 {
+    color: #ebebeb;
+    color: #46a872;
+    font-weight: 500;
+}
+
+#myControls {
+    z-index: 100 !important;
+}
+
+body {
+    font-family: "Lato", sans-serif !important;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.7;
+    background: #e9e9e9 !important;
+}
+
+@keyframes flash {
+    from {
+        opacity: .2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.flash {
+    animation: 1s flash .1s forwards;
+}
+
+.mask {
+    background-image: url("/Eyedentify/img/home/photo.png") !important;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: .6;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eyedentify</title>
+    <!-- Font Awesome -->
+
+    <style>
+.myid,.myid0,.myid1,.myid2,.myid3,.myid4,.myid5,.myid6,.myid7,.myid8{display:inline-block;overflow:hidden;text-indent:-9999px;text-align:left}.myid,.myid0,.myid1,.myid2,.myid4,.myid5,.myid6,.myid7,.myid8{width:200px;height:215px}.myid0,.myid1,.myid2,.myid3,.myid4,.myid5,.myid6,.myid7,.myid8{background:url(/Eyedentify/img/home/photoId.png) no-repeat;-webkit-transition:opacity 2s;-o-transition:opacity 2s;transition:opacity 2s}.myid{background:url(/Eyedentify/img/home/myid.png) no-repeat}.myid0{background-position:0 0}.myid1{background-position:-200px 0}.myid2{background-position:-400px 0}.myid3{background-position:0 -215px;width:200px;height:215px}.myid4{background-position:-200px -215px}.myid5{background-position:-400px -215px}.myid6{background-position:0 -430px}.myid7{background-position:-200px -430px}.myid8{background-position:-400px -430px}body{font-family:"Lato",sans-serif!important;text-align:center;font-size:1.5rem;font-weight:400;line-height:1.7;height:100vh;overflow:hidden;background:lighten($white,5%)!important}@-webkit-keyframes colorchange{0%{background:-webkit-gradient(linear,right bottom,left top,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(bottom right,#579ca5,#5fc48d);background:linear-gradient(to top left,#579ca5,#5fc48d)}33%{background:-webkit-gradient(linear,left bottom,right top,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(bottom left,#579ca5,#5fc48d);background:linear-gradient(to top right,#579ca5,#5fc48d)}66%{background:-webkit-gradient(linear,left top,right bottom,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(top left,#579ca5,#5fc48d);background:linear-gradient(to bottom right,#579ca5,#5fc48d)}100%{background:-webkit-gradient(linear,right top,left bottom,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(top right,#579ca5,#5fc48d);background:linear-gradient(to bottom left,#579ca5,#5fc48d)}}@keyframes colorchange{0%{background:-webkit-gradient(linear,right bottom,left top,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(bottom right,#579ca5,#5fc48d);background:-o-linear-gradient(bottom right,#579ca5,#5fc48d);background:linear-gradient(to top left,#579ca5,#5fc48d)}33%{background:-webkit-gradient(linear,left bottom,right top,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(bottom left,#579ca5,#5fc48d);background:-o-linear-gradient(bottom left,#579ca5,#5fc48d);background:linear-gradient(to top right,#579ca5,#5fc48d)}66%{background:-webkit-gradient(linear,left top,right bottom,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(top left,#579ca5,#5fc48d);background:-o-linear-gradient(top left,#579ca5,#5fc48d);background:linear-gradient(to bottom right,#579ca5,#5fc48d)}100%{background:-webkit-gradient(linear,right top,left bottom,from(#579ca5),to(#5fc48d));background:-webkit-linear-gradient(top right,#579ca5,#5fc48d);background:-o-linear-gradient(top right,#579ca5,#5fc48d);background:linear-gradient(to bottom left,#579ca5,#5fc48d)}}#eyedentify{position:absolute;z-index:9999;left:0;top:0;width:100vw;height:100vh;text-align:center}.eyedentify-container{position:relative;top:20%;padding:1rem 0;margin:auto;width:70%;border-radius:1rem;z-index:100}.eyedentify-container h2{font-family:"Lato";margin-top:13rem;color:#fff;font-size:1.5rem;line-height:1.7;font-weight:400;text-shadow:0 .5rem 1rem rgba(0,0,0,.218)}#idPhoto{border-radius:.5rem;-webkit-box-shadow:0 1rem 3rem rgba(0,0,0,.3);box-shadow:0 1rem 3rem rgba(0,0,0,.3);width:80%}#idLogo{position:absolute;top:.5rem;left:13%}.eyedentify-background{background:-webkit-gradient(linear,left top,right top,from(#579ca5),to(#5fc48d))!important;background:-webkit-linear-gradient(left,#579ca5,#5fc48d)!important;background:-o-linear-gradient(left,#579ca5,#5fc48d)!important;background:linear-gradient(to right,#579ca5,#5fc48d)!important;-webkit-transition:all 2s;-o-transition:all 2s;transition:all 2s;position:absolute;width:100vw;z-index:10;height:110vh!important;top:0!important}@-webkit-keyframes scann{0%{top:0}100%{top:100%}}@keyframes scann{0%{top:0}100%{top:100%}}.scanner{position:absolute;background:rgba(187,255,203,.226);-webkit-box-shadow:0 1rem 1rem rgba(187,255,203,.37);box-shadow:0 1rem 1rem rgba(187,255,203,.37);width:100vw;height:1rem;z-index:9999;-webkit-animation:3s scann .1s infinite;animation:3s scann .1s infinite;top:-2rem}
+    </style>
+</head>
+
+<body>
+    <div id="eyedentify">
+        <div class="scanner">&nbsp;</div>
+        <div class="eyedentify-background"> &nbsp; </div>
+        <div class="eyedentify-container">
+            <!-- <img src="/img/home/2.jpg" id="idPhoto" alt="Owl Photo"> -->
+            <h2>Your Image is being eyedentified</h2>
+            <div id="idLogo" class="myid"></div>
+        </div>
+    </div>
+
+
+    <script>
+        var logoId = document.getElementById("idLogo"),
+            timer = 0;
+        (function () {
+            animateId();
+            setInterval(function () {
+                animateId()
+            }, 4500);
+            setTimeout(function () {
+                window.location = "/Eyedentify/pages/basicInfo.html"
+            }, 5E3)
+        })();
+
+        function animateId() {
+            for (var b = 0, a = {
+                    i: 0
+                }; 8 >= a.i; a = {
+                    i: a.i
+                }, a.i++) setTimeout(function (a) {
+                return function () {
+                    logoId.className = "myid" + a.i
+                }
+            }(a), b), b += 500
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.card-title{
+    font-size: calc(3vw + 3vh + 1vmin);
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.card {
+    margin: 1vh;
+    border-radius: 2vw;
+}
+
+/*Add a border radius to the cards in browse*/
+.py-5 {
+    border-radius: 2vw;
+}
