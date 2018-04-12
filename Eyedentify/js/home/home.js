@@ -11,9 +11,13 @@ function photoGalleryMove() {
         $("#photoGallery").show();
         showGallery = false;
         window.scrollTo(0, document.body.scrollHeight);
+        $("#search").removeClass("fg_muted");
+        selected = true;
     } else {
         $("#photoGallery").hide();
         showGallery = true;
+        $("#search").addClass("fg_muted");
+        selected = false;
     }
 }
 function takePhoto() {
@@ -36,8 +40,7 @@ function selectImage(image, isValid) {
     if (isValid) {
         $(image).css("border", "solid #ebebff 4px");
         $(image).css("border-radius", ".5rem");
-        $("#search").removeClass("fg_muted");
-        selected = true;
+        
     } else {
         $(image).css("border", "solid grey 2px");
     }

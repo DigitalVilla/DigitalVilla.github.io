@@ -25,15 +25,18 @@ body {
 .btn-no-shadow:enabled {
     border: none;
     box-shadow: none;
-    padding-left:
 }
 
 #galleryBtn {
-    width: 7rem !important;
-    border-top-left-radius: 10rem !important;
-    border-top-right-radius: 10rem !important;
-    box-shadow: none;
+    width: 6rem !important;
+    border-radius: 4rem !important;
+    height: 6rem;
+    padding:0;
+    margin:0;
+    border: none;
 }
+
+
 
 .myIndex {
     height: 100vh !important;

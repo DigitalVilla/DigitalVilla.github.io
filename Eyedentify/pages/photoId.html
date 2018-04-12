@@ -110,30 +110,38 @@
     </main>
     <!-- /photo tray -->
     <!-- bottom bar -->
-    <footer class="fixed-bottom" id="myControls">
-        <div class="container-fluid">
-            <button id="galleryBtn" class="btn btn-block bg_primary z-depth-0" onclick="photoGalleryMove()">
-                <i class="fa fa-photo fa-2x "></i>
+<footer class = "fixed-bottom" id = "myControls">
+    <div class = "container-fluid">
+        <div class = "row mb-3">
+            <div class = "col-9"></div>
+            <div class = "col-2">
+                <button id = "galleryBtn" class = "  bg_primary z-depth-1" onclick =
+                        "photoGalleryMove()">
+                    <i class = "fg_white fa fa-photo fa-2x " id = "gallaryIcon"></i>
+                </button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class = "row bg_success text-center noHover z-depth-0">
+        <div class = "col-4 mt-1">
+            <button class = " btn-block bg_success z-depth-0 btn-no-shadow">
+                <i class = "fa fa-microphone fa-2x fg_muted mt-1 mb-1"></i>
             </button>
         </div>
-        <div class="row bg_success text-center noHover z-depth-0">
-            <div class="col-4 mt-1">
-                <button class=" btn-block bg_success z-depth-0 btn-no-shadow">
-                    <i class="fa fa-microphone fa-2x fg_muted mt-1 mb-1"></i>
-                </button>
-            </div>
-            <div class="col-4 mt-1">
-                <button onclick="takePhoto()" class=" btn-block bg_success z-depth-0 btn-no-shadow text-dark">
-                    <i class="fg_white  fa fa-circle-o fa-2x mt-1 mb-1"></i>
-                </button>
-            </div>
-            <div class="col-4 mt-1">
-                <button id="searchBtn" class=" btn-block bg_success z-depth-0 btn-no-shadow" onclick="photoId()">
-                    <i class="fg_white fg_muted fa fa-binoculars fa-2x text-muted mt-1 mb-1" id="search"></i>
-                </button>
-            </div>
+        <div class = "col-4 mt-1">
+            <button  onclick = "takePhoto()" class =
+                    "btn-block bg_success z-depth-0 btn-no-shadow text-dark">
+                <i class = "fg_white  fa fa-circle-o fa-2x"></i>
+            </button>
         </div>
-    </footer>
+        <div class = "col-4 mt-1">
+            <button id = "searchBtn" class = " btn-block bg_success z-depth-0 btn-no-shadow" onclick = "photoId()">
+                <i class = "fg_white fg_muted fa fa-binoculars fa-2x text-muted mt-1 mb-1" id = "search"></i>
+            </button>
+        </div>
+    </div>
+</footer>
     <!-- /bottom bar -->
 
 
