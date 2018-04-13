@@ -36,8 +36,10 @@
 
     </div>
     <script>
+ 
     var anima=document.querySelector("#anima"),flag=!1;setTimeout(function(){animateId();setTimeout(function(){setInterval(function(){animate(flag);flag=!flag},950)},900)},900);function animateId(){for(var a=0,b={i:0};8>=b.i;b={i:b.i},b.i++)setTimeout(function(a){return function(){anima.className="myid"+a.i}}(b),a),a+=200}
 function animate(a){for(var b=0,c={},d=0;5>=d;c={sprite:c.sprite},d++)c.sprite=a&&4==d?"myColibri4c":"myColibri"+d,setTimeout(function(b){return function(){anima.style.top=a?"10rem":"10.4rem";anima.className=b.sprite}}(c),b),b+=150}var intro=document.querySelector(".loadingPage");document.addEventListener("click",function(a){console.log(a.target.className);a.target.classList.contains("startBtn")&&(window.location="/Eyedentify/pages/photoId.html")});
+alert("IMPORTANT!: For a full experience of this prototype,\n\nPlease inspect this web page (F12)\n\nAnd choose Samsung S5 as the mobile layout.\n\nEnter: \'admin\' for the username and password.");
     </script>
 </body>
 </html>
