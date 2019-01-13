@@ -582,6 +582,7 @@ body {
   width: 100%; }
 
 #About {
+  background-color: #fff;
   text-align: center;
   font-size: 2rem; }
   #About h1 {
@@ -592,8 +593,7 @@ body {
     border: 4px solid #06d59c; }
   #About p {
     text-align: justify;
-    margin: 2rem 1rem;
-    max-width: 400px; }
+    margin: 2rem 1rem; }
   #About .signature {
     text-align: right;
     padding-right: 2rem; }
