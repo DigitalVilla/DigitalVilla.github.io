@@ -87,7 +87,8 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: linear-gradient(#1de699, #fc456d); }
 
 header {
   height: 100vh; }
@@ -592,7 +593,8 @@ body {
     border: 4px solid #06d59c; }
   #About p {
     text-align: justify;
-    margin: 2rem 1rem; }
+    margin: 2rem 1rem;
+    max-width: 400px; }
   #About .signature {
     text-align: right;
     padding-right: 2rem; }
@@ -1010,7 +1012,7 @@ body {
     display: block; } }
 
 /* iPhone / mobile webkit */
-@media (min-width: 740px) {
+@media (max-width: 740px) {
   .header {
     background-attachment: fixed; } }
 
