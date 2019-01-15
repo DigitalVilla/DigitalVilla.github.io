@@ -38,7 +38,7 @@ let memorax = {
         let html = [
             '<div data-id="' + c.id + '" class="game-pad_card-face face-down">',
             '<svg class="face-down_img">',
-            '<use xlink:href="/Memory/img/sprite.svg#icon-' + c.name + '"></use>',
+            '<use xlink:href="/Match_io/img/sprite.svg#icon-' + c.name + '"></use>',
             '</svg>', , '</div>'
         ].join('');
         div.innerHTML = html;
