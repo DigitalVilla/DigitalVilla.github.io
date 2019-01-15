@@ -1,0 +1,15 @@
+#portfolio {
+    padding: 0 !important;
+    height: 100vh !important;
+    background-image: linear-gradient( to right bottom, rgba(#000, 0.7), rgba(#000, 0.6)), url(../img/herologo.jpg);
+    background-attachment: fixed;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media only screen and (max-width: $bp-800) {
+        background-attachment: fixed;
+        height: 100% !important;
+    }
+}
+
+

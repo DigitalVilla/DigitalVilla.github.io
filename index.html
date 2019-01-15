@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
     <meta name="apple-mobile-web-app-title" content="Digital Villa">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="apple-touch-icon" href="img/icon.png">
     <link rel="icon" type="image/png" href="img/icon.png">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -28,14 +30,14 @@
                 <!-- <li class="navigation_item">
                     <a href="/Eyedentify/index.html" class="navigation_link" id="2">Eyedentify</a>
                 </li> -->
-                <!-- <li class="navigation_item">
-                    <a href="https://github.com/DigitalVilla" class="navigation_link" id="3">Portfolio</a>
-                </li> -->
-                <!-- <li class="navigation_item">
-                    <a href="/PocketChange/index.html" class="navigation_link" id="4">Pocket</a>
-                </li> -->
                 <li class="navigation_item">
-                    <a href="/Memory/index.html" class="navigation_link" id="5">Play Match</a>
+                    <a href="https://github.com/DigitalVilla" class="navigation_link" id="3">Github</a>
+                </li>
+                <li class="navigation_item">
+                    <a href="https://www.linkedin.com/in/digitalvilla/" class="navigation_link" id="4">Linkedin</a>
+                </li>
+                <li class="navigation_item">
+                    <a href="/Match_io/index.html" class="navigation_link" id="5">Match.io</a>
                 </li>
                 <li class="navigation_item">
                     <a href="#Home" class="navigation_link" id="6">Home</a>
@@ -59,17 +61,14 @@
             </div>
 
             <ul class="header_menu-list">
-                <!-- <li class="">
-                    <a href="/Eyedentify/index.html">Eyedentify</a>
-                </li> -->
-                <!-- <li class="">
-                    <a href="https://github.com/DigitalVilla">Portfolio</a>
-                </li> -->
-                <!-- <li class="">
-                    <a href="/PocketChange/index.html">Pocket</a>
-                </li> -->
                 <li class="">
-                    <a href="/Memory/index.html">Play Match</a>
+                    <a href="https://github.com/DigitalVilla">Github</a>
+                </li>
+                <li class="">
+                    <a href="https://www.linkedin.com/in/digitalvilla/">Linkedin</a>
+                </li>
+                <li class="">
+                    <a href="/Match_io/index.html">Match.io</a>
                 </li>
             </ul>
         </nav>
@@ -80,8 +79,7 @@
                 <span>Developer & Graphic Designer </span>
             </h1>
             <div class="header_title-btn">
-                <a type="button" href="https://github.com/DigitalVilla" class="btn btn--white btn--animated"> Github
-                    Portfolio</a>
+                <a type="button" href="#portfolio" class="btn btn--white btn--animated"> Portfolio</a>
             </div>
         </div>
 
@@ -92,22 +90,27 @@
             </div>
             <h1>Villanueva</h1>
             <div class="header_mobile-title-btn">
-                <a type="button" href="https://github.com/DigitalVilla" class="btn btn--white btn--animated"> Github</a>
+                <a type="button" href="#portfolio"  class="btn btn--white btn--animated"> Portfolio</a>
             </div>
         </div>
     </header>
     <main>
+
+
         <section id="About">
             <h1>ABOUT ME </h1>
             <img src="/img/me.jpg" alt="profile pictue" class="profilepic">
             <p>
-                I am a husband, father & "Graphic Developer". (I bring aesthetics to everything I program). <br> 
+                I am a husband, father & "Graphic Developer". (I bring aesthetics to everything I program). <br>
 
                 At age 12 I went to an afternoon art institute to learn composition and color theory. At age 14 I won a
                 junior art contest in my high school. At age 16 I was taught how to draw comics(Marvel/DC style) by a
                 professional comic illustrator. And at age 18 I went to University to study organizational psychology.
                 It may seem odd but I saw aesthetics and design as my hobby not my career. However, when I moved to
-                Canada and my previous studies could not been transferred I immerged myself into the digital world and thrugh word of mouthI staterd creating business designs besides my 9-5 job. And One day I was asked to make a website, I had never programmed anything before but the challenge was up and in 1 month I discovered what I realy wanted to do as my career, 
+                Canada and my previous studies could not been transferred I immerged myself into the digital world and
+                thrugh word of mouthI staterd creating business designs besides my 9-5 job. And One day I was asked to
+                make a website, I had never programmed anything before but the challenge was up and in 1 month I
+                discovered what I realy wanted to do as my career,
 
 
             </p>
@@ -135,7 +138,6 @@
                 <img src="/img/sign.jpg" alt="" class="signature_sign">
             </div>
         </section>
-
         <section id="Experience">
             <h1 class="secondary-head">Skills and Experience</h1>
             <div class="resume row">
@@ -276,7 +278,7 @@
             <br>
         </section>
 
-        <section id="Portfolio" style="display: none;">
+        <!-- <section id="Portfolio" style="display: none;">
             <h1 class="secondary-head">Portfolio</h1>
 
             <div class="slider slider-display-container" style="max-width:800px">
@@ -311,6 +313,11 @@
 
 
 
+        </section> -->
+
+        <!-- //Portfolio -->
+        <section id="portfolio">
+            <div id="slider" class="selectDisable"></div>
         </section>
 
         <section class="popup" id="Contact">
@@ -364,6 +371,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

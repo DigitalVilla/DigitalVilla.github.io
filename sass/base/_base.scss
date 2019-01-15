@@ -14,6 +14,8 @@ html {
 body {
     box-sizing: border-box;
     background: linear-gradient(#1de699,#fc456d);
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 header {
@@ -61,3 +63,10 @@ li {
 }
 
 @media (max-height: $BP2) {}
+
+// RESPONSIVE BREAKPOINTS
+$bp-1200: 75em; // 1200px /16px 
+$bp-1000: 62.5em; // 1000px
+$bp-800: 50em; // 800px;
+$bp-600: 37.5em; // 600px;
+$bp-400: 28.13em; // 450px;
