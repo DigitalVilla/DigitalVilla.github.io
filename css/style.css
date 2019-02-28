@@ -78,7 +78,7 @@
   from {
     opacity: 0; }
   to {
-    opacity: .8; } }
+    opacity: .9; } }
 
 @keyframes fadeInLeft {
   from {
@@ -547,7 +547,8 @@ body {
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   opacity: .8;
-  box-shadow: 0 1.4rem 1rem rgba(46, 46, 46, 0.5); }
+  box-shadow: 0 1.4rem 1rem rgba(46, 46, 46, 0.5);
+  z-index: 2000 !important; }
   .sidetab img {
     transition: all .2s;
     width: 100%;
@@ -872,11 +873,12 @@ body {
   background-size: cover; }
   .footer p {
     color: #fff;
-    font-size: 2rem; }
-
-@media (min-width: 740px) {
-  .footer {
-    background-attachment: fixed; } }
+    font-size: 1rem; }
+  @media (min-width: 740px) {
+    .footer {
+      background-attachment: fixed; }
+      .footer p {
+        font-size: 2rem; } }
 
 .row {
   max-width: 100%;
@@ -1067,9 +1069,8 @@ body {
     background-attachment: fixed; } }
 
 #portfolio {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  height: 100% !important;
+  padding: 0 !important;
+  height: 100vh !important;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../img/herologo.jpg);
   background-attachment: fixed;
   background-position: right bottom;
@@ -1077,4 +1078,5 @@ body {
   background-size: cover; }
   @media only screen and (max-width: 50em) {
     #portfolio {
-      background-attachment: fixed; } }
+      background-attachment: fixed;
+      height: 100% !important; } }
